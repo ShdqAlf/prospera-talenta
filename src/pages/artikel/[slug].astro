@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('artikel');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  author: {
+    '@type': 'Organization',
+    name: post.data.author,
+  },
+  datePublished: post.data.pubDate.toISOString(),
+  publisher: {
+    '@type': 'Organization',
+    name: 'PT Prospera Talenta',
+    url: 'https://prosperatalenta.co.id',
+  },
+};
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  schema={articleSchema}
+>
+  <article class="bg-[#FAF8F5] border-b border-[#E7E2D9] py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <nav class="text-xs text-[#78716C] mb-4 flex items-center gap-2">
+        <a href="/" class="hover:text-[#1C1917]">Beranda</a>
+        <span>/</span>
+        <a href="/artikel" class="hover:text-[#1C1917]">Artikel</a>
+        <span>/</span>
+        <span class="text-[#1C1917] font-medium truncate">{post.data.title}</span>
+      </nav>
+
+      <div class="flex items-center gap-3 text-xs text-[#78716C] mb-3">
+        <span class="font-semibold uppercase tracking-wider text-[#C8371B]">
+          {post.data.category}
+        </span>
+        <span>•</span>
+        <time datetime={post.data.pubDate.toISOString()}>
+          {post.data.pubDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        <span>•</span>
+        <span>{post.data.readingTime}</span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1C1917] tracking-tight leading-tight mb-4">
+        {post.data.title}
+      </h1>
+      <p class="text-sm sm:text-base text-[#57534E] leading-relaxed border-l-2 border-[#C8371B] pl-4 italic">
+        {post.data.description}
+      </p>
+    </div>
+  </article>
+
+  <section class="py-14 bg-white border-b border-[#E7E2D9]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Main Article Content -->
+        <div class="lg:col-span-3 prose prose-stone max-w-none text-[#1C1917] text-sm sm:text-base leading-relaxed space-y-4">
+          <Content />
+        </div>
+
+        <!-- Sidebar CTA -->
+        <aside class="lg:col-span-1 space-y-6">
+          <div class="p-5 bg-[#FAF8F5] border border-[#E7E2D9] rounded sticky top-24">
+            <p class="text-[11px] font-mono uppercase text-[#78716C] font-semibold mb-1">Kemitraan B2B</p>
+            <h3 class="text-sm font-bold text-[#1C1917] mb-2">Butuh Tim Sales Lapangan?</h3>
+            <p class="text-xs text-[#57534E] leading-relaxed mb-4">
+              PT Prospera Talenta menyediakan 38.000+ talenta SPG, canvassing, dan tim aktivasi terkelola di 50+ kota.
+            </p>
+            <a
+              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20layanan%20sales."
+              target="_blank"
+              rel="noopener"
+              class="block text-center bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold py-2.5 rounded transition"
+            >
+              Konsultasi WhatsApp
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[#E7E2D9] flex justify-between items-center text-xs">
+        <a href="/artikel" class="font-medium text-[#1C1917] hover:text-[#C8371B]">
+          &larr; Kembali ke Daftar Artikel
+        </a>
+        <a href="/layanan" class="font-semibold text-[#C8371B] hover:underline">
+          Lihat Layanan Kami &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Tentang Jasa Sales Indonesia',
+  description: 'Profil agensi penyedia 38.000+ talenta sales terkelola di seluruh Indonesia.',
+};
+---
+
+<Layout
+  title="Tentang Kami - Agensi Talenta & Sales B2B Terbesar di Indonesia"
+  description="Mengenal Jasa Sales Indonesia: jaringan 38.000+ talenta sales, SPG, direct sales, dan digital growth force di lebih dari 50 kota Indonesia."
+  schema={aboutSchema}
+>
+  <section class="bg-slate-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <nav class="text-xs text-slate-400 mb-4 flex items-center gap-2">
+          <a href="/" class="hover:text-white">Beranda</a>
+          <span>/</span>
+          <span class="text-white font-medium">Tentang Kami</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+          Mitra Strategis Penetrasi Pasar & Sales Force B2B
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+          Menjembatani brand korporat dengan puluhan ribu talenta eksekutor lapangan yang terlatih, terdisiplin, dan berorientasi pada pencapaian omzet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-2xl font-extrabold text-slate-900 mb-4">Siapa Kami</h2>
+          <p class="text-slate-600 leading-relaxed mb-4 text-sm sm:text-base">
+            <strong>Jasa Sales</strong> adalah agensi penyedia dan pengelola tenaga penjualan (sales force) independen di Indonesia. Kami mengelola jaringan aktif lebih dari <strong>38.000 talenta</strong> yang siap dideploy untuk penugasan sales offline maupun aktivasi digital.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            Kami memahami tantangan divisi komersial perusahaan: rekrutmen tim lapangan memakan waktu, tingginya turnover staf penjualan, serta sulitnya pengawasan di banyak kota sekaligus. Jasa Sales hadir sebagai solusi menyeluruh dengan sistem supervisi ketat.
+          </p>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 space-y-6">
+          <div class="border-b border-slate-200 pb-4">
+            <span class="text-3xl font-extrabold text-blue-600">38.000+</span>
+            <p class="text-sm font-semibold text-slate-800">Database Talenta Siap Kerja</p>
+            <p class="text-xs text-slate-500">Terdiri dari SPG/SPB, Canvasser, Surveyor, Clipper, hingga Komunitas.</p>
+          </div>
+          <div class="border-b border-slate-200 pb-4">
+            <span class="text-3xl font-extrabold text-blue-600">50+</span>
+            <p class="text-sm font-semibold text-slate-800">Cakupan Wilayah Kota</p>
+            <p class="text-xs text-slate-500">Dari Jabodetabek, Jawa, Sumatera, Kalimantan, Sulawesi, hingga Bali & Nusa Tenggara.</p>
+          </div>
+          <div>
+            <span class="text-3xl font-extrabold text-emerald-600">100%</span>
+            <p class="text-sm font-semibold text-slate-800">Berbadan Hukum & Legal</p>
+            <p class="text-xs text-slate-500">Kerjasama profesional berbasis kontrak B2B resmi dengan invoice dan pajak tertib.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-200">
+        <h2 class="text-2xl font-extrabold text-slate-900 mb-6 text-center">Nilai Layanan Kami</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="text-base font-bold text-slate-900 mb-2">Akuntabilitas & Integritas</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Setiap rupiah investasi sales Anda terukur melalui pelaporan absensi, data kunjungan, dan closing valid.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="text-base font-bold text-slate-900 mb-2">Kecepatan Respon (Speed)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Dapat memenuhi kebutuhan personel darurat dalam hitungan 24-48 jam sebelum jadwal acara dibuka.
+            </p>
+          </div>
+          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="text-base font-bold text-slate-900 mb-2">Fleksibilitas Kontrak</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Mulai dari event harian, proyek aktivasi bulanan, hingga kontrak outsourcing tahunan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

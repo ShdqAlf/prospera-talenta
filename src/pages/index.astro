@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { services } from '../data/services';
+
+const featuredServices = services.slice(0, 6);
+
+const homeSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Jasa Sales B2B Indonesia',
+  url: 'https://jasasales.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://jasasales.com/layanan?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<Layout
+  title="Agensi Outsourcing Sales & Talenta Lapangan B2B Indonesia"
+  description="Penyedia 38.000+ talenta sales terlatih di 50+ kota Indonesia. Layanan SPG/SPB, direct sales canvassing, mystery shopper, clipper TikTok, dan rating review bergaransi."
+  schema={homeSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 text-white pt-20 pb-24 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/20 px-3.5 py-1.5 rounded-full text-blue-300 text-xs font-semibold uppercase tracking-wider mb-6">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          B2B Sales Force Outsourcing
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
+          Deploy Ratusan Tim Sales Tanpa Beban Rekrutmen.
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
+          Akselerasi penjualan offline dan online dengan <strong class="text-white">38.000+ talenta terverifikasi</strong> di seluruh kota Indonesia. Mulai dari SPG event, canvassing lapangan, akuisisi user aplikasi, hingga clipper viral media sosial.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a
+            href="https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20ingin%20konsultasi%20kebutuhan%20sales%20perusahaan%20kami."
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base px-7 py-4 rounded-xl shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5"
+          >
+            Konsultasi Kebutuhan (Gratis)
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+          <a
+            href="/layanan"
+            class="inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-base px-6 py-4 rounded-xl transition"
+          >
+            Lihat Katalog Layanan
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="mt-16 pt-12 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+        <div>
+          <p class="text-3xl sm:text-4xl font-extrabold text-blue-400">38.000+</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-medium">Talenta Terkelola</p>
+        </div>
+        <div>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">50+ Kota</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-medium">Jangkauan Nasional</p>
+        </div>
+        <div>
+          <p class="text-3xl sm:text-4xl font-extrabold text-emerald-400">93%</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-medium">Engagement Rate</p>
+        </div>
+        <div>
+          <p class="text-3xl sm:text-4xl font-extrabold text-amber-400">2x24 Jam</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-medium">SLA Cepat Siap Deploy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem & Solution Section (B2B Angle) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-blue-600 mb-2">Mengapa B2B Memilih JasaSales</h2>
+        <p class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+          Fokus pada Produk dan Strategi. Biarkan Kami Menangani Eksekusi Lapangan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xl mb-6">
+            01
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Tanpa Biaya Payroll & Rekrutmen Internal</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Pangkas beban HRD dan biaya rekrutmen. Talenta siap bertugas sesuai kebutuhan proyek tanpa ikatan karyawan permanen perusahaan Anda.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-xl mb-6">
+            02
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Supervisi Lapangan & Tracking Transparan</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Setiap tim sales didampingi koordinator lapangan (Leader/Supervisor) dengan laporan GPS, absensi digital, dan rekap closing penjualan harian.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xl mb-6">
+            03
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Skalabilitas Fleksibel di Berbagai Kota</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Perlu 5 SPG di Bandung akhir pekan ini atau 100 sales canvasser serentak di 10 kota bulan depan? Sistem kurasi kami siap memenuhi kuota Anda.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services Grid -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <h2 class="text-xs uppercase font-bold tracking-widest text-blue-600 mb-2">Solusi Unggulan</h2>
+          <p class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+            Layanan Sales Lapangan & Digital
+          </p>
+        </div>
+        <a href="/layanan" class="text-sm font-bold text-blue-600 hover:text-blue-700 inline-flex items-center gap-1.5">
+          Lihat Semua 10 Layanan &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredServices.map((service) => (
+          <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-blue-50 text-blue-700">
+                  {service.categoryLabel}
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2.5">
+                <a href={`/layanan/${service.slug}`} class="hover:text-blue-600 transition">
+                  {service.title}
+                </a>
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                {service.tagline}
+              </p>
+
+              <div class="border-t border-slate-100 pt-4 mb-6">
+                <p class="text-xs font-semibold uppercase text-slate-400 tracking-wider mb-2">Termasuk:</p>
+                <ul class="text-xs text-slate-600 space-y-1.5">
+                  {service.deliverables.slice(0, 3).map((item) => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-500 font-bold">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <a
+                href={`/layanan/${service.slug}`}
+                class="text-xs font-bold text-blue-600 hover:text-blue-800 transition"
+              >
+                Detail Layanan &rarr;
+              </a>
+              <a
+                href={`https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20tertarik%20dengan%20layanan%20${encodeURIComponent(service.title)}.`}
+                target="_blank"
+                rel="noopener"
+                class="text-xs font-semibold bg-slate-900 hover:bg-blue-600 text-white px-3 py-1.5 rounded-lg transition"
+              >
+                Tanya Rate Card
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works (B2B Workflow) -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase font-bold tracking-widest text-blue-600 mb-2">Alur Kerjasama</h2>
+        <p class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+          4 Langkah Mudah Mulai Kerjasama B2B
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-3xl font-extrabold text-blue-600 mb-3">01</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Konsultasi Kebutuhan</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Sampaikan target penjualan, jumlah kota, kriteria talenta, serta jadwal pelaksanaan event/proyek Anda.
+          </p>
+        </div>
+
+        <div class="relative p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-3xl font-extrabold text-blue-600 mb-3">02</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Kurasi & Seleksi Talenta</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Kami menyiapkan kandidat terverifikasi lengkap dengan portofolio/kompro untuk disetujui pihak klien.
+          </p>
+        </div>
+
+        <div class="relative p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-3xl font-extrabold text-blue-600 mb-3">03</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Briefing & Standarisasi SOP</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Penyelarasan pengetahuan produk, skenario komunikasi, dan penetapan target closing sebelum tim diterjunkan.
+          </p>
+        </div>
+
+        <div class="relative p-6 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-3xl font-extrabold text-blue-600 mb-3">04</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Eksekusi & Live Reporting</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Tim bergerak di lapangan dengan pengawasan supervisor dan pengiriman laporan harian yang transparan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Lead Gen CTA -->
+  <section class="py-20 bg-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+        Siap Melejitkan Penjualan Bisnis Anda Hari Ini?
+      </h2>
+      <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Diskusikan kebutuhan tim sales, SPG event, atau kampanye digital bersama konsultan B2B kami. Kami siapkan skema anggaran yang paling efisien.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20ingin%20jadwalkan%20diskusi%20kebutuhan%20sales%20B2B."
+          target="_blank"
+          rel="noopener"
+          class="bg-white hover:bg-slate-100 text-blue-700 font-bold px-8 py-4 rounded-xl shadow-lg transition text-base"
+        >
+          Hubungi via WhatsApp (Fast Response)
+        </a>
+        <a
+          href="/kontak"
+          class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-4 rounded-xl border border-blue-500 transition text-base"
+        >
+          Kirim Request Proposal
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

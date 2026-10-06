@@ -10,20 +10,19 @@ interface Props {
 
 const {
   title,
-  description = 'Jasa Sales Indonesia - Agensi penyedia 38.000+ talenta sales lapangan, SPG/SPB event, canvassing, clipper video, hingga buzzer untuk akselerasi bisnis B2B.',
+  description = 'PT Prospera Talenta - Agensi pengadaan dan pengelolaan tenaga penjualan (sales force) B2B skala nasional. Penyedia 38.000+ talenta SPG/SPB, canvassing lapangan, akuisisi user, dan digital growth.',
   canonical,
   schema,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
-const siteUrl = 'https://jasasales.com';
+const siteUrl = 'https://prosperatalenta.co.id';
 const canonicalUrl = canonical || new URL(currentPath, siteUrl).toString();
 
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Jasa Sales Indonesia',
-  alternateName: 'PT Jasa Sales Prospera',
+  name: 'PT Prospera Talenta',
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
   description: description,
@@ -37,9 +36,6 @@ const orgSchema = {
     postalCode: '41211',
     addressCountry: 'ID',
   },
-  sameAs: [
-    'https://www.jasasales.com',
-  ],
 };
 ---
 
@@ -48,218 +44,187 @@ const orgSchema = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | Jasa Sales Indonesia (B2B)</title>
+    <title>{title} | PT Prospera Talenta</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={`${title} | Jasa Sales B2B`} />
+    <meta property="og:title" content={`${title} | PT Prospera Talenta`} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content="id_ID" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalUrl} />
-    <meta property="twitter:title" content={`${title} | Jasa Sales B2B`} />
+    <meta property="twitter:title" content={`${title} | PT Prospera Talenta`} />
     <meta property="twitter:description" content={description} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
-  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
-    <!-- Top Announcement Bar -->
-    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-        <div class="flex items-center gap-4">
-          <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
-            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Siap deploy 38.000+ talenta di seluruh kota Indonesia
-          </span>
-          <span class="hidden md:inline text-slate-500">•</span>
-          <span class="hidden md:inline">Layanan B2B Enterprise & Corporate Retainer</span>
+  <body class="bg-[#FAF8F5] text-[#1C1917] antialiased">
+    <!-- Utility Bar -->
+    <div class="bg-[#1C1917] text-[#D6D0C7] text-xs py-2 px-4 border-b border-[#2C2825]">
+      <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <span class="text-[#FAF8F5] font-medium">PT Prospera Talenta</span>
+          <span class="text-[#57534E]">|</span>
+          <span class="text-[#A8A29E]">Mitra Pengadaan Sales Force & Talenta B2B</span>
         </div>
-        <div class="flex items-center gap-4">
-          <a href="mailto:jasasalesprospera@gmail.com" class="hover:text-white transition">jasasalesprospera@gmail.com</a>
+        <div class="flex items-center gap-4 text-[#A8A29E]">
+          <a href="mailto:jasasalesprospera@gmail.com" class="hover:text-[#FAF8F5] transition">jasasalesprospera@gmail.com</a>
           <span>•</span>
-          <a href="https://wa.me/6281398079090" target="_blank" rel="noopener" class="font-medium text-white hover:text-emerald-400 transition">WA: +62 813-9807-9090</a>
+          <a href="https://wa.me/6281398079090" target="_blank" rel="noopener" class="text-[#FAF8F5] hover:text-[#E86144] transition">WA: 0813-9807-9090</a>
         </div>
       </div>
     </div>
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-3 group">
-          <div class="w-10 h-10 rounded-xl bg-blue-600 text-white font-black text-xl flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:bg-blue-700 transition">
-            JS
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-[#E7E2D9]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded bg-[#C8371B] text-[#FAF8F5] font-bold text-sm flex items-center justify-center tracking-tight">
+            PT
           </div>
-          <div>
-            <span class="text-xl font-bold tracking-tight text-slate-900 block leading-tight">JasaSales<span class="text-blue-600">.com</span></span>
-            <span class="text-[11px] font-medium uppercase tracking-wider text-slate-500">B2B Sales Agency</span>
+          <div class="leading-tight">
+            <span class="text-base font-bold tracking-tight text-[#1C1917] block">PROSPERA TALENTA</span>
+            <span class="text-[10px] uppercase tracking-wider text-[#78716C] block">Corporate Sales Force</span>
           </div>
         </a>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
-          <a href="/" class={`hover:text-blue-600 transition ${currentPath === '/' ? 'text-blue-600' : ''}`}>Beranda</a>
-          <a href="/layanan" class={`hover:text-blue-600 transition ${currentPath.startsWith('/layanan') ? 'text-blue-600' : ''}`}>Katalog Layanan</a>
-          <a href="/layanan/spg-spb-event" class="hover:text-blue-600 transition">Jasa SPG/SPB</a>
-          <a href="/layanan/direct-sales-canvassing" class="hover:text-blue-600 transition">Direct Sales</a>
-          <a href="/layanan/clipper-short-video" class="hover:text-blue-600 transition">Clipper Video</a>
-          <a href="/tentang" class={`hover:text-blue-600 transition ${currentPath === '/tentang' ? 'text-blue-600' : ''}`}>Tentang Kami</a>
-          <a href="/kontak" class={`hover:text-blue-600 transition ${currentPath === '/kontak' ? 'text-blue-600' : ''}`}>Hubungi Kami</a>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-[#44403C]">
+          <a href="/" class={`hover:text-[#C8371B] transition ${currentPath === '/' ? 'text-[#C8371B] font-semibold' : ''}`}>Beranda</a>
+          <a href="/layanan" class={`hover:text-[#C8371B] transition ${currentPath.startsWith('/layanan') ? 'text-[#C8371B] font-semibold' : ''}`}>Layanan</a>
+          <a href="/layanan/spg-spb-event" class="hover:text-[#C8371B] transition">SPG/SPB</a>
+          <a href="/layanan/direct-sales-canvassing" class="hover:text-[#C8371B] transition">Canvassing</a>
+          <a href="/tentang" class={`hover:text-[#C8371B] transition ${currentPath === '/tentang' ? 'text-[#C8371B] font-semibold' : ''}`}>Tentang</a>
+          <a href="/kontak" class={`hover:text-[#C8371B] transition ${currentPath === '/kontak' ? 'text-[#C8371B] font-semibold' : ''}`}>Kontak</a>
         </nav>
 
         <!-- Right Action Button -->
-        <div class="hidden sm:flex items-center gap-3">
+        <div class="hidden sm:flex items-center">
           <a
-            href="https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20ingin%20konsultasi%20kebutuhan%20sales%20B2B%20perusahaan%20kami."
+            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20konsultasi%20kebutuhan%20sales%20force%20perusahaan."
             target="_blank"
             rel="noopener"
-            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition"
+            class="bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold px-4 py-2.5 rounded transition"
           >
-            <span>Konsultasi Proyek</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
+            Konsultasi Proyek
           </a>
         </div>
 
-        <!-- Mobile Toggle Button -->
-        <button id="mobile-menu-btn" type="button" aria-label="Buka Menu" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100">
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" type="button" aria-label="Menu" class="md:hidden p-2 text-[#44403C]">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
 
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
-        <a href="/" class="block py-2 text-sm font-semibold text-slate-800 hover:text-blue-600">Beranda</a>
-        <a href="/layanan" class="block py-2 text-sm font-semibold text-slate-800 hover:text-blue-600">Semua Layanan</a>
-        <a href="/layanan/spg-spb-event" class="block py-2 text-sm font-semibold text-slate-600 pl-3">↳ Jasa SPG/SPB</a>
-        <a href="/layanan/direct-sales-canvassing" class="block py-2 text-sm font-semibold text-slate-600 pl-3">↳ Direct Sales & Canvassing</a>
-        <a href="/layanan/clipper-short-video" class="block py-2 text-sm font-semibold text-slate-600 pl-3">↳ Clipper Short Video</a>
-        <a href="/layanan/rating-review-google-marketplace" class="block py-2 text-sm font-semibold text-slate-600 pl-3">↳ Optimasi Rating & Review</a>
-        <a href="/tentang" class="block py-2 text-sm font-semibold text-slate-800 hover:text-blue-600">Tentang Kami</a>
-        <a href="/kontak" class="block py-2 text-sm font-semibold text-slate-800 hover:text-blue-600">Hubungi Kami</a>
-        <div class="pt-3">
+      <!-- Mobile Dropdown -->
+      <div id="mobile-dropdown" class="hidden md:hidden border-t border-[#E7E2D9] bg-[#FAF8F5] px-4 py-4 space-y-2 text-sm">
+        <a href="/" class="block py-1.5 font-medium text-[#1C1917]">Beranda</a>
+        <a href="/layanan" class="block py-1.5 font-medium text-[#1C1917]">Katalog Layanan</a>
+        <a href="/layanan/spg-spb-event" class="block py-1 text-xs text-[#57534E] pl-2">↳ Jasa SPG/SPB</a>
+        <a href="/layanan/direct-sales-canvassing" class="block py-1 text-xs text-[#57534E] pl-2">↳ Direct Sales & Canvassing</a>
+        <a href="/layanan/clipper-short-video" class="block py-1 text-xs text-[#57534E] pl-2">↳ Clipper Video</a>
+        <a href="/tentang" class="block py-1.5 font-medium text-[#1C1917]">Tentang Kami</a>
+        <a href="/kontak" class="block py-1.5 font-medium text-[#1C1917]">Kontak</a>
+        <div class="pt-2">
           <a
-            href="https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20ingin%20konsultasi%20kebutuhan%20sales%20B2B."
+            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20konsultasi."
             target="_blank"
             rel="noopener"
-            class="w-full text-center block bg-blue-600 text-white font-semibold text-sm py-3 rounded-lg"
+            class="block text-center bg-[#C8371B] text-[#FAF8F5] py-2 rounded text-xs font-semibold"
           >
-            Konsultasi WhatsApp Sekarang
+            Hubungi WhatsApp
           </a>
         </div>
       </div>
     </header>
 
-    <!-- Main Content Slot -->
     <main>
       <slot />
     </main>
 
-    <!-- Floating WhatsApp CTA -->
-    <aside class="fixed bottom-6 right-6 z-50">
+    <!-- Discreet WhatsApp Float -->
+    <aside class="fixed bottom-5 right-5 z-50">
       <a
-        href="https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20tertarik%20konsultasi%20layanan%20sales%20B2B."
+        href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20tanya%20layanan%20sales."
         target="_blank"
         rel="noopener"
-        class="flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition font-semibold text-sm"
-        aria-label="Hubungi WhatsApp"
+        class="flex items-center gap-2 bg-[#1C1917] hover:bg-[#C8371B] text-[#FAF8F5] px-3.5 py-2.5 rounded shadow text-xs font-medium transition"
+        aria-label="Kontak WhatsApp"
       >
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-        <span class="hidden sm:inline">Tanya Tim Kami</span>
+        <span class="w-2 h-2 rounded-full bg-[#E86144]"></span>
+        <span>WhatsApp Konsultasi</span>
       </a>
     </aside>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
-          <!-- Col 1 -->
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-9 h-9 rounded-lg bg-blue-600 text-white font-black text-lg flex items-center justify-center">
-                JS
-              </div>
-              <span class="text-xl font-bold text-white tracking-tight">JasaSales<span class="text-blue-500">.com</span></span>
-            </div>
-            <p class="text-sm text-slate-400 leading-relaxed mb-4">
-              Solusi pengadaan talenta sales B2B skala nasional. Membantu korporasi, brand FMCG, dan startup mengakselerasi penjualan offline dan ekspansi online.
+    <footer class="bg-[#1C1917] text-[#A8A29E] pt-14 pb-10 border-t border-[#292524] text-xs">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#292524]">
+          <div class="md:col-span-1">
+            <span class="text-sm font-bold text-[#FAF8F5] tracking-tight block mb-2">PT PROSPERA TALENTA</span>
+            <p class="leading-relaxed text-[#78716C] mb-4">
+              Penyedia dan pengelola tenaga penjualan lapangan serta talenta digital B2B terstruktur di Indonesia.
             </p>
-            <div class="text-xs text-slate-500 space-y-1">
-              <p class="font-medium text-slate-400">Jangkauan Layanan:</p>
-              <p>Jakarta, Surabaya, Bandung, Medan, Makassar, Semarang, Bali, dan 50+ kota lainnya.</p>
-            </div>
+            <p class="text-[#78716C]">prosperatalenta.co.id</p>
           </div>
 
-          <!-- Col 2 -->
           <div>
-            <p class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Layanan Lapangan</p>
-            <ul class="space-y-2.5 text-sm">
-              <li><a href="/layanan/spg-spb-event" class="hover:text-blue-400 transition">Jasa SPG & SPB Event</a></li>
-              <li><a href="/layanan/direct-sales-canvassing" class="hover:text-blue-400 transition">Direct Sales & Canvassing</a></li>
-              <li><a href="/layanan/sales-aplikasi-fintech" class="hover:text-blue-400 transition">Sales Aplikasi & Fintech</a></li>
-              <li><a href="/layanan/mystery-shopper-audit" class="hover:text-blue-400 transition">Mystery Shopper & Audit</a></li>
-              <li><a href="/layanan/crew-event-organizer" class="hover:text-blue-400 transition">Crew Event & Usher</a></li>
+            <p class="font-semibold text-[#FAF8F5] uppercase tracking-wider mb-3">Layanan Lapangan</p>
+            <ul class="space-y-2">
+              <li><a href="/layanan/spg-spb-event" class="hover:text-[#FAF8F5] transition">SPG & SPB Event</a></li>
+              <li><a href="/layanan/direct-sales-canvassing" class="hover:text-[#FAF8F5] transition">Direct Sales & Canvassing</a></li>
+              <li><a href="/layanan/sales-aplikasi-fintech" class="hover:text-[#FAF8F5] transition">Sales Aplikasi Mobile</a></li>
+              <li><a href="/layanan/mystery-shopper-audit" class="hover:text-[#FAF8F5] transition">Mystery Shopper</a></li>
+              <li><a href="/layanan/crew-event-organizer" class="hover:text-[#FAF8F5] transition">Crew Event & Usher</a></li>
             </ul>
           </div>
 
-          <!-- Col 3 -->
           <div>
-            <p class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Layanan Digital & Crowd</p>
-            <ul class="space-y-2.5 text-sm">
-              <li><a href="/layanan/clipper-short-video" class="hover:text-blue-400 transition">Jasa Clipper TikTok/Reels</a></li>
-              <li><a href="/layanan/buzzer-dan-kol-activation" class="hover:text-blue-400 transition">Buzzer & KOL Activation</a></li>
-              <li><a href="/layanan/rating-review-google-marketplace" class="hover:text-blue-400 transition">Optimasi Rating & Review</a></li>
-              <li><a href="/layanan/host-live-streaming" class="hover:text-blue-400 transition">Host Live Streaming</a></li>
-              <li><a href="/layanan/aktivasi-komunitas-crowd" class="hover:text-blue-400 transition">Aktivasi Komunitas & Massa</a></li>
+            <p class="font-semibold text-[#FAF8F5] uppercase tracking-wider mb-3">Layanan Digital</p>
+            <ul class="space-y-2">
+              <li><a href="/layanan/clipper-short-video" class="hover:text-[#FAF8F5] transition">Clipper Video TikTok/Reels</a></li>
+              <li><a href="/layanan/buzzer-dan-kol-activation" class="hover:text-[#FAF8F5] transition">Buzzer & Micro KOL</a></li>
+              <li><a href="/layanan/rating-review-google-marketplace" class="hover:text-[#FAF8F5] transition">Rating & Review Organik</a></li>
+              <li><a href="/layanan/host-live-streaming" class="hover:text-[#FAF8F5] transition">Host Live Streaming</a></li>
+              <li><a href="/layanan/aktivasi-komunitas-crowd" class="hover:text-[#FAF8F5] transition">Aktivasi Komunitas</a></li>
             </ul>
           </div>
 
-          <!-- Col 4 -->
           <div>
-            <p class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Kontak & Kantor</p>
-            <div class="text-sm space-y-3">
-              <p class="leading-relaxed text-slate-400">
-                Buana Subang Kencana, Blk. D No.29, Karanganyar, Kec. Subang, Jawa Barat 41211
-              </p>
-              <div>
-                <span class="block text-xs text-slate-500 uppercase font-semibold">WhatsApp Resmi:</span>
-                <a href="https://wa.me/6281398079090" target="_blank" rel="noopener" class="text-emerald-400 hover:underline font-medium">0813-9807-9090</a>
-              </div>
-              <div>
-                <span class="block text-xs text-slate-500 uppercase font-semibold">Email Kemitraan:</span>
-                <a href="mailto:jasasalesprospera@gmail.com" class="text-slate-300 hover:text-white">jasasalesprospera@gmail.com</a>
-              </div>
+            <p class="font-semibold text-[#FAF8F5] uppercase tracking-wider mb-3">Kantor & Kontak</p>
+            <div class="space-y-2 text-[#78716C]">
+              <p>Buana Subang Kencana, Blk. D No.29, Karanganyar, Subang, Jawa Barat 41211</p>
+              <p><strong class="text-[#A8A29E]">WhatsApp:</strong> 0813-9807-9090</p>
+              <p><strong class="text-[#A8A29E]">Email:</strong> jasasalesprospera@gmail.com</p>
             </div>
           </div>
         </div>
 
-        <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} JasaSales.com — All Rights Reserved. Solusi B2B Sales & Talent Deployment.</p>
-          <div class="flex items-center gap-6">
-            <a href="/tentang" class="hover:text-slate-400">Tentang</a>
-            <a href="/layanan" class="hover:text-slate-400">Layanan</a>
-            <a href="/kontak" class="hover:text-slate-400">Kontak</a>
+        <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[#78716C] gap-3">
+          <p>© {new Date().getFullYear()} PT Prospera Talenta. Hak Cipta Dilindungi.</p>
+          <div class="flex items-center gap-4">
+            <a href="/tentang" class="hover:text-[#A8A29E]">Tentang</a>
+            <a href="/layanan" class="hover:text-[#A8A29E]">Layanan</a>
+            <a href="/kontak" class="hover:text-[#A8A29E]">Kontak</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script>
-      const btn = document.getElementById('mobile-menu-btn');
-      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-toggle');
+      const menu = document.getElementById('mobile-dropdown');
       if (btn && menu) {
         btn.addEventListener('click', () => {
           menu.classList.toggle('hidden');

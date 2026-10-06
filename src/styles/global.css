@@ -1,8 +1,25 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --bg-cream: #FAF8F5;
+    --surface-cream: #F4EFEB;
+    --brand-primary: #C8371B;
+    --brand-hover: #A82B13;
+    --text-primary: #1C1917;
+    --text-muted: #57534E;
+    --border-color: #E7E2D9;
+  }
+
   html {
     scroll-behavior: smooth;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+  }
+
+  ::selection {
+    background-color: #C8371B;
+    color: #FAF8F5;
   }
 }

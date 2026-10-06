@@ -5,89 +5,80 @@ import { services } from '../../data/services';
 const catalogSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Katalog Layanan Jasa Sales Indonesia',
-  description: 'Daftar lengkap layanan pengadaan sales lapangan, SPG event, canvassing, clipper video, buzzer, dan crowd marketing B2B.',
+  name: 'Direktori Layanan PT Prospera Talenta',
+  description: 'Pengadaan tim sales lapangan, SPG event, canvassing, mystery shopper, clipper video, dan aktivasi massa B2B.',
   itemListElement: services.map((s, idx) => ({
     '@type': 'ListItem',
     position: idx + 1,
     name: s.title,
-    url: `https://jasasales.com/layanan/${s.slug}`,
+    url: `https://prosperatalenta.co.id/layanan/${s.slug}`,
   })),
 };
 ---
 
 <Layout
-  title="Katalog Layanan Sales B2B & Outsourcing Talenta Lapangan"
-  description="Pilihan lengkap layanan sales B2B: Jasa SPG/SPB, direct sales canvassing, sales aplikasi mobile, clipper short video, buzzer, dan aktivasi komunitas nasional."
+  title="Direktori Layanan Sales Force & Outsourcing Talenta B2B"
+  description="Katalog komprehensif layanan PT Prospera Talenta: SPG/SPB event, direct sales canvassing, mystery shopper, sales aplikasi, clipper video, dan aktivasi komunitas."
   schema={catalogSchema}
 >
-  <section class="bg-slate-900 text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <nav class="text-xs text-slate-400 mb-4 flex items-center gap-2">
-          <a href="/" class="hover:text-white">Beranda</a>
-          <span>/</span>
-          <span class="text-white font-medium">Layanan</span>
-        </nav>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-          Katalog Lengkap Layanan Sales & Talenta B2B
-        </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-          Pilih solusi yang tepat untuk akselerasi bisnis Anda. Seluruh talenta terkurasi, berorientasi target, dan diawasi oleh tim koordinator profesional.
-        </p>
-      </div>
+  <section class="bg-[#FAF8F5] border-b border-[#E7E2D9] py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav class="text-xs text-[#78716C] mb-3 flex items-center gap-2">
+        <a href="/" class="hover:text-[#1C1917]">Beranda</a>
+        <span>/</span>
+        <span class="text-[#1C1917] font-medium">Layanan</span>
+      </nav>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1C1917] tracking-tight mb-3">
+        Direktori Layanan B2B
+      </h1>
+      <p class="text-sm sm:text-base text-[#57534E] max-w-2xl leading-relaxed">
+        Infrastruktur penyedia talenta terlatih dan terorganisir untuk percepatan komersial produk di seluruh wilayah Indonesia.
+      </p>
     </div>
   </section>
 
-  <section class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <section class="py-14 bg-white border-b border-[#E7E2D9]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
-          <article class="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <article class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-blue-50 text-blue-700">
-                  {service.categoryLabel}
-                </span>
-              </div>
-              <h2 class="text-xl font-bold text-slate-900 mb-3">
-                <a href={`/layanan/${service.slug}`} class="hover:text-blue-600 transition">
+              <p class="text-[11px] font-semibold uppercase tracking-wider text-[#78716C] mb-2">
+                {service.categoryLabel}
+              </p>
+              <h2 class="text-base font-bold text-[#1C1917] mb-2">
+                <a href={`/layanan/${service.slug}`} class="hover:text-[#C8371B] transition">
                   {service.title}
                 </a>
               </h2>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+              <p class="text-xs text-[#57534E] leading-relaxed mb-4">
                 {service.description}
               </p>
 
-              <div class="space-y-3 mb-6">
-                <div>
-                  <p class="text-xs font-semibold uppercase text-slate-400 tracking-wider mb-2">Deliverables Utama:</p>
-                  <ul class="text-xs text-slate-600 space-y-1">
-                    {service.deliverables.slice(0, 3).map((d) => (
-                      <li class="flex items-start gap-2">
-                        <span class="text-emerald-500 font-bold">✓</span>
-                        <span>{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div class="border-t border-[#E7E2D9] pt-3 mb-4">
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-[#78716C] mb-2">Cakupan Kerja:</p>
+                <ul class="text-xs text-[#57534E] space-y-1">
+                  {service.deliverables.slice(0, 3).map((d) => (
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-[#C8371B] font-bold">•</span>
+                      <span>{d}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
-            <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
-              <a
-                href={`/layanan/${service.slug}`}
-                class="text-xs font-bold text-blue-600 hover:text-blue-800 transition"
-              >
+            <div class="pt-4 border-t border-[#E7E2D9] flex items-center justify-between text-xs">
+              <a href={`/layanan/${service.slug}`} class="font-medium text-[#1C1917] hover:text-[#C8371B]">
                 Lihat Detail &rarr;
               </a>
               <a
-                href={`https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(service.title)}.`}
+                href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20tanya%20detail%20layanan%20${encodeURIComponent(service.title)}.`}
                 target="_blank"
                 rel="noopener"
-                class="text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white px-3.5 py-2 rounded-lg transition"
+                class="font-semibold text-[#C8371B] hover:text-[#A82B13]"
               >
-                Konsultasi WA
+                Minta Penawaran
               </a>
             </div>
           </article>
@@ -96,22 +87,21 @@ const catalogSchema = {
     </div>
   </section>
 
-  <!-- CTA Banner -->
-  <section class="bg-white py-16 border-t border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">
-        Butuh Paket Custom Sesuai Budget Perusahaan?
+  <section class="py-14 bg-[#FAF8F5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-xl font-bold text-[#1C1917] mb-2">
+        Kebutuhan Penugasan Skala Multi-Kota?
       </h2>
-      <p class="text-slate-600 mb-8 max-w-xl mx-auto text-sm sm:text-base">
-        Kami melayani penggabungan tim sales offline (SPG / Canvassing) dan digital (Clipper / Review) untuk penetrasi pasar serentak.
+      <p class="text-xs sm:text-sm text-[#57534E] max-w-xl mx-auto mb-6">
+        Kami berpengalaman mengkoordinasikan ratusan personel serentak untuk kampanye peluncuran produk dan roadshow nasional.
       </p>
       <a
-        href="https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20butuh%20paket%20kombinasi%20layanan%20sales%20custom."
+        href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20paket%20penugasan%20multi-kota."
         target="_blank"
         rel="noopener"
-        class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-7 py-3.5 rounded-xl shadow transition"
+        class="inline-block bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold px-5 py-2.5 rounded transition"
       >
-        Diskusikan Kebutuhan Custom &rarr;
+        Diskusikan Skema Proyek
       </a>
     </div>
   </section>

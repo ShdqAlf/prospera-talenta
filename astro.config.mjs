@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://jasasales.com',
+  site: 'https://prosperatalenta.co.id',
   trailingSlash: 'never',
   integrations: [sitemap()],
   vite: {

@@ -18,23 +18,12 @@ const serviceSchema = {
   description: service.description,
   provider: {
     '@type': 'Organization',
-    name: 'Jasa Sales Indonesia',
-    url: 'https://jasasales.com',
+    name: 'PT Prospera Talenta',
+    url: 'https://prosperatalenta.co.id',
   },
   areaServed: {
     '@type': 'Country',
     name: 'Indonesia',
-  },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: service.title,
-    itemListElement: service.deliverables.map((item) => ({
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: item,
-      },
-    })),
   },
 };
 
@@ -53,83 +42,80 @@ const faqSchema = {
 ---
 
 <Layout
-  title={`${service.title} - Penyedia Talenta Terlatih`}
-  description={`${service.tagline} Database 38.000+ talenta di seluruh Indonesia. Garansi penugasan profesional & supervisi lapangan.`}
+  title={`${service.title} - Penyedia Talenta B2B`}
+  description={`${service.tagline} Dikelola PT Prospera Talenta dengan supervisi lapangan dan standarisasi SOP.`}
   schema={serviceSchema}
 >
-  <!-- Breadcrumb & Hero -->
-  <section class="bg-slate-900 text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-400 mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-white">Beranda</a>
+  <!-- Breadcrumb & Header -->
+  <section class="bg-[#FAF8F5] border-b border-[#E7E2D9] py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav class="text-xs text-[#78716C] mb-3 flex items-center gap-2">
+        <a href="/" class="hover:text-[#1C1917]">Beranda</a>
         <span>/</span>
-        <a href="/layanan" class="hover:text-white">Layanan</a>
+        <a href="/layanan" class="hover:text-[#1C1917]">Layanan</a>
         <span>/</span>
-        <span class="text-blue-400 font-medium">{service.title}</span>
+        <span class="text-[#1C1917] font-medium">{service.title}</span>
       </nav>
 
       <div class="max-w-3xl">
-        <span class="inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-blue-500/20 text-blue-300 border border-blue-400/30 mb-4">
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#C8371B] mb-2">
           {service.categoryLabel}
-        </span>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+        </p>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1C1917] tracking-tight mb-4">
           {service.title}
         </h1>
-        <p class="text-lg text-slate-300 leading-relaxed mb-8">
+        <p class="text-base text-[#57534E] leading-relaxed mb-6">
           {service.tagline}
         </p>
 
-        <div class="flex flex-wrap items-center gap-4">
-          <a
-            href={`https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20ingin%20konsultasi%20dan%20minta%20rate%20card%20layanan%20${encodeURIComponent(service.title)}.`}
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-lg transition"
-          >
-            <span>Dapatkan Penawaran & Rate Card</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
-        </div>
+        <a
+          href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20minta%20rate%20card%20layanan%20${encodeURIComponent(service.title)}.`}
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold px-5 py-2.5 rounded transition"
+        >
+          Minta Rate Card & Ketersediaan
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Detail Content Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <!-- Main Info -->
-        <div class="lg:col-span-2 space-y-12">
+  <!-- Service Details -->
+  <section class="py-14 bg-white border-b border-[#E7E2D9]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Main -->
+        <div class="lg:col-span-2 space-y-10">
           <div>
-            <h2 class="text-2xl font-extrabold text-slate-900 mb-4">Deskripsi Layanan</h2>
-            <p class="text-slate-700 leading-relaxed text-base">
+            <h2 class="text-lg font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              Deskripsi & Gambaran Umum
+            </h2>
+            <p class="text-sm text-[#57534E] leading-relaxed">
               {service.description}
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Ruang Lingkup & Deliverables</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <h2 class="text-lg font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              Deliverables & Tanggung Jawab
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {service.deliverables.map((item) => (
-                <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-                  <div class="flex items-start gap-3">
-                    <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
-                    <span class="text-sm font-medium text-slate-800 leading-snug">{item}</span>
-                  </div>
+                <div class="p-3.5 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
+                  <span class="text-xs font-medium text-[#1C1917] block">• {item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           <div>
-            <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Keuntungan Kemitraan B2B</h2>
-            <div class="space-y-4">
-              {service.benefits.map((benefit, i) => (
-                <div class="flex items-start gap-4 p-4 rounded-xl bg-blue-50/50 border border-blue-100">
-                  <span class="text-blue-700 font-bold text-sm">{`0${i + 1}`}</span>
-                  <p class="text-sm text-slate-700 font-medium">{benefit}</p>
+            <h2 class="text-lg font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              Keunggulan Bagi Klien Korporat
+            </h2>
+            <div class="space-y-2">
+              {service.benefits.map((b) => (
+                <div class="p-3 bg-[#FAF8F5] border-l-2 border-[#C8371B] text-xs text-[#57534E]">
+                  {b}
                 </div>
               ))}
             </div>
@@ -137,10 +123,12 @@ const faqSchema = {
 
           {service.targetIndustries.length > 0 && (
             <div>
-              <h2 class="text-xl font-bold text-slate-900 mb-4">Cocok untuk Industri:</h2>
+              <h2 class="text-sm font-bold text-[#1C1917] uppercase tracking-wider mb-2">
+                Kesesuaian Sektor Industri:
+              </h2>
               <div class="flex flex-wrap gap-2">
                 {service.targetIndustries.map((ind) => (
-                  <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200">
+                  <span class="px-2.5 py-1 bg-[#FAF8F5] text-[#57534E] text-xs border border-[#E7E2D9] rounded">
                     {ind}
                   </span>
                 ))}
@@ -148,15 +136,16 @@ const faqSchema = {
             </div>
           )}
 
-          <!-- FAQs -->
           {service.faqs.length > 0 && (
-            <div class="pt-8 border-t border-slate-200">
-              <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Pertanyaan yang Sering Diajukan (FAQ)</h2>
-              <div class="space-y-4">
+            <div class="pt-6 border-t border-[#E7E2D9]">
+              <h2 class="text-lg font-bold text-[#1C1917] mb-4">
+                Pertanyaan Umum
+              </h2>
+              <div class="space-y-3">
                 {service.faqs.map((faq) => (
-                  <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
-                    <h3 class="text-base font-bold text-slate-900 mb-2">{faq.question}</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">{faq.answer}</p>
+                  <div class="p-4 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
+                    <h3 class="text-xs font-bold text-[#1C1917] mb-1.5">{faq.question}</h3>
+                    <p class="text-xs text-[#57534E] leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
               </div>
@@ -164,44 +153,37 @@ const faqSchema = {
           )}
         </div>
 
-        <!-- Sidebar Sticky Contact Card -->
+        <!-- Sidebar -->
         <div class="lg:col-span-1">
-          <div class="sticky top-28 bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-sm space-y-6">
-            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-3">
-              Konsultasi Layanan Ini
+          <div class="sticky top-24 bg-[#FAF8F5] border border-[#E7E2D9] rounded p-5 space-y-4">
+            <h3 class="text-sm font-bold text-[#1C1917] pb-2 border-b border-[#E7E2D9]">
+              Konsultasi Layanan
             </h3>
+            <p class="text-xs text-[#57534E] leading-relaxed">
+              Hubungi representatif PT Prospera Talenta untuk mendapatkan profil kandidat, rate card resmi, dan simulasi penugasan.
+            </p>
 
-            <div class="space-y-3 text-sm text-slate-600">
-              <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 px-3 py-2 rounded-lg font-medium">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                Ketersediaan talenta: Siap deploy
-              </div>
-              <p class="text-xs text-slate-500">
-                Punya spesifikasi khusus atau jumlah kuota personel tertentu? Kami siap siapkan simulasi anggarannya.
-              </p>
-            </div>
-
-            <div class="space-y-3 pt-2">
+            <div class="space-y-2 pt-2">
               <a
-                href={`https://wa.me/6281398079090?text=Halo%20JasaSales%2C%20saya%20mau%20tanya%20detail%20layanan%20${encodeURIComponent(service.title)}.`}
+                href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20layanan%20${encodeURIComponent(service.title)}.`}
                 target="_blank"
                 rel="noopener"
-                class="w-full block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow transition"
+                class="block text-center bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold py-2.5 rounded transition"
               >
-                Chat via WhatsApp
+                Chat WhatsApp PIC
               </a>
               <a
                 href="/kontak"
-                class="w-full block text-center bg-white hover:bg-slate-100 text-slate-800 font-semibold text-sm py-3 px-4 rounded-xl border border-slate-300 transition"
+                class="block text-center bg-white hover:bg-[#FAF8F5] text-[#1C1917] border border-[#E7E2D9] text-xs font-medium py-2 rounded transition"
               >
-                Minta Form Proposal
+                Kirim Formulir RFP
               </a>
             </div>
 
-            <div class="pt-4 border-t border-slate-200 text-xs text-slate-500 space-y-2">
-              <p>✓ Fast response & konsultasi tanpa komitmen</p>
-              <p>✓ SLA seleksi talenta 1-2 hari kerja</p>
-              <p>✓ Kontrak kerja resmi B2B berbadan hukum</p>
+            <div class="pt-3 border-t border-[#E7E2D9] text-[11px] text-[#78716C] space-y-1">
+              <p>• Perjanjian kerjasama resmi berbadan hukum</p>
+              <p>• Skema tagihan corporate invoice</p>
+              <p>• Pengawasan supervisor lapangan</p>
             </div>
           </div>
         </div>
@@ -209,6 +191,5 @@ const faqSchema = {
     </div>
   </section>
 
-  <!-- JSON-LD FAQ Schema injection -->
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </Layout>

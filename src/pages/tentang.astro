@@ -4,84 +4,75 @@ import Layout from '../layouts/Layout.astro';
 const aboutSchema = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'Tentang Jasa Sales Indonesia',
-  description: 'Profil agensi penyedia 38.000+ talenta sales terkelola di seluruh Indonesia.',
+  name: 'Tentang PT Prospera Talenta',
+  description: 'Profil perusahaan penyedia dan pengelola tenaga kerja sales lapangan dan digital di Indonesia.',
 };
 ---
 
 <Layout
-  title="Tentang Kami - Agensi Talenta & Sales B2B Terbesar di Indonesia"
-  description="Mengenal Jasa Sales Indonesia: jaringan 38.000+ talenta sales, SPG, direct sales, dan digital growth force di lebih dari 50 kota Indonesia."
+  title="Tentang Perusahaan - Profil PT Prospera Talenta"
+  description="PT Prospera Talenta adalah agensi penyedia dan pengelola tenaga penjualan B2B di 50+ kota Indonesia. Didukung jaringan 38.000+ talenta sales force."
   schema={aboutSchema}
 >
-  <section class="bg-slate-900 text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <nav class="text-xs text-slate-400 mb-4 flex items-center gap-2">
-          <a href="/" class="hover:text-white">Beranda</a>
-          <span>/</span>
-          <span class="text-white font-medium">Tentang Kami</span>
-        </nav>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-          Mitra Strategis Penetrasi Pasar & Sales Force B2B
-        </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-          Menjembatani brand korporat dengan puluhan ribu talenta eksekutor lapangan yang terlatih, terdisiplin, dan berorientasi pada pencapaian omzet.
-        </p>
-      </div>
+  <section class="bg-[#FAF8F5] border-b border-[#E7E2D9] py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav class="text-xs text-[#78716C] mb-3 flex items-center gap-2">
+        <a href="/" class="hover:text-[#1C1917]">Beranda</a>
+        <span>/</span>
+        <span class="text-[#1C1917] font-medium">Tentang Kami</span>
+      </nav>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1C1917] tracking-tight mb-3">
+        Profil PT Prospera Talenta
+      </h1>
+      <p class="text-sm sm:text-base text-[#57534E] max-w-2xl leading-relaxed">
+        Mitra operasional korporat dalam penyediaan, pelatihan, dan pengawasan tenaga penjualan di seluruh Indonesia.
+      </p>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <section class="py-14 bg-white border-b border-[#E7E2D9]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
+      <div>
+        <h2 class="text-xl font-bold text-[#1C1917] mb-3">Latar Belakang Perusahaan</h2>
+        <p class="text-sm text-[#57534E] leading-relaxed mb-4">
+          <strong>PT Prospera Talenta</strong> berdiri untuk menjawab tantangan fundamental yang dihadapi perusahaan dalam memperluas penetrasi pasar: tingginya biaya rekrutmen internal, turnover tenaga penjualan lapangan, serta kompleksitas supervisi operasional multi-cabang.
+        </p>
+        <p class="text-sm text-[#57534E] leading-relaxed">
+          Melalui sistem seleksi terpusat dan jaringan lebih dari <strong>38.000 talenta terdaftar</strong> di lebih dari 50 kota, kami memungkinkan brand mendistribusikan produk, mengumpulkan data pasar, dan menggelar event aktivasi secara presisi tanpa menambah beban struktur HRD internal.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-[#E7E2D9]">
         <div>
-          <h2 class="text-2xl font-extrabold text-slate-900 mb-4">Siapa Kami</h2>
-          <p class="text-slate-600 leading-relaxed mb-4 text-sm sm:text-base">
-            <strong>Jasa Sales</strong> adalah agensi penyedia dan pengelola tenaga penjualan (sales force) independen di Indonesia. Kami mengelola jaringan aktif lebih dari <strong>38.000 talenta</strong> yang siap dideploy untuk penugasan sales offline maupun aktivasi digital.
-          </p>
-          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-            Kami memahami tantangan divisi komersial perusahaan: rekrutmen tim lapangan memakan waktu, tingginya turnover staf penjualan, serta sulitnya pengawasan di banyak kota sekaligus. Jasa Sales hadir sebagai solusi menyeluruh dengan sistem supervisi ketat.
-          </p>
+          <span class="text-2xl font-extrabold text-[#1C1917] block">38.000+</span>
+          <span class="text-xs font-semibold text-[#1C1917] mt-1 block">Talenta Terverifikasi</span>
+          <p class="text-xs text-[#78716C] mt-1">Basis data talenta aktif SPG/SPB, canvasser, surveyor, dan clipper.</p>
         </div>
-        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 space-y-6">
-          <div class="border-b border-slate-200 pb-4">
-            <span class="text-3xl font-extrabold text-blue-600">38.000+</span>
-            <p class="text-sm font-semibold text-slate-800">Database Talenta Siap Kerja</p>
-            <p class="text-xs text-slate-500">Terdiri dari SPG/SPB, Canvasser, Surveyor, Clipper, hingga Komunitas.</p>
-          </div>
-          <div class="border-b border-slate-200 pb-4">
-            <span class="text-3xl font-extrabold text-blue-600">50+</span>
-            <p class="text-sm font-semibold text-slate-800">Cakupan Wilayah Kota</p>
-            <p class="text-xs text-slate-500">Dari Jabodetabek, Jawa, Sumatera, Kalimantan, Sulawesi, hingga Bali & Nusa Tenggara.</p>
-          </div>
-          <div>
-            <span class="text-3xl font-extrabold text-emerald-600">100%</span>
-            <p class="text-sm font-semibold text-slate-800">Berbadan Hukum & Legal</p>
-            <p class="text-xs text-slate-500">Kerjasama profesional berbasis kontrak B2B resmi dengan invoice dan pajak tertib.</p>
-          </div>
+        <div>
+          <span class="text-2xl font-extrabold text-[#1C1917] block">50+ Kota</span>
+          <span class="text-xs font-semibold text-[#1C1917] mt-1 block">Jangkauan Nasional</span>
+          <p class="text-xs text-[#78716C] mt-1">Mencakup tier 1 hingga tier 3 di Jawa, Sumatera, Kalimantan, Sulawesi, dan Bali.</p>
+        </div>
+        <div>
+          <span class="text-2xl font-extrabold text-[#C8371B] block">B2B Compliance</span>
+          <span class="text-xs font-semibold text-[#1C1917] mt-1 block">Kontrak Berbadan Hukum</span>
+          <p class="text-xs text-[#78716C] mt-1">Perjanjian kerja sama legal, faktur pajak, dan transparansi administrasi.</p>
         </div>
       </div>
 
-      <div class="pt-8 border-t border-slate-200">
-        <h2 class="text-2xl font-extrabold text-slate-900 mb-6 text-center">Nilai Layanan Kami</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="text-base font-bold text-slate-900 mb-2">Akuntabilitas & Integritas</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Setiap rupiah investasi sales Anda terukur melalui pelaporan absensi, data kunjungan, dan closing valid.
+      <div class="pt-4 border-t border-[#E7E2D9]">
+        <h2 class="text-xl font-bold text-[#1C1917] mb-4">Prinsip Kerja Sama</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
+            <h3 class="text-xs font-bold text-[#1C1917] mb-1">Supervisi Terdesentralisasi</h3>
+            <p class="text-xs text-[#57534E] leading-relaxed">
+              Setiap penugasan didampingi Team Leader setempat yang bertanggung jawab langsung atas presensi dan kepatuhan SOP brand.
             </p>
           </div>
-          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="text-base font-bold text-slate-900 mb-2">Kecepatan Respon (Speed)</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Dapat memenuhi kebutuhan personel darurat dalam hitungan 24-48 jam sebelum jadwal acara dibuka.
-            </p>
-          </div>
-          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 class="text-base font-bold text-slate-900 mb-2">Fleksibilitas Kontrak</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Mulai dari event harian, proyek aktivasi bulanan, hingga kontrak outsourcing tahunan.
+          <div class="p-4 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
+            <h3 class="text-xs font-bold text-[#1C1917] mb-1">Kecepatan Mobilisasi</h3>
+            <p class="text-xs text-[#57534E] leading-relaxed">
+              SLA penyiapan kandidat dalam 24–48 jam kerja untuk mengantisipasi agenda pameran darurat atau pembukaan gerai baru.
             </p>
           </div>
         </div>

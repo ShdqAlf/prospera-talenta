@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { services } from '../data/services';
+---
+
+<Layout
+  title="404 - Halaman Tidak Ditemukan"
+  description="Halaman yang Anda tuju tidak ditemukan atau telah dipindahkan. Jelajahi katalog jasa sales dan outsourcing talenta PT Prospera Talenta."
+>
+  <section class="py-20 bg-[#FAF8F5] border-b border-[#E7E2D9]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <span class="inline-block text-xs font-bold tracking-wider uppercase text-[#C8371B] bg-[#C8371B]/10 px-3 py-1 rounded mb-4">
+        Error 404
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-[#1C1917] tracking-tight mb-4">
+        Halaman Tidak Ditemukan
+      </h1>
+      <p class="text-sm sm:text-base text-[#57534E] max-w-xl mx-auto mb-8 leading-relaxed">
+        Tautan yang Anda akses mungkin telah dipindahkan atau tautan lama telah diperbarui. Silakan kembali ke beranda atau telusuri layanan jasa sales kami di bawah ini.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <a
+          href="/"
+          class="bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold px-5 py-2.5 rounded transition"
+        >
+          Kembali ke Beranda
+        </a>
+        <a
+          href="/layanan"
+          class="bg-white hover:bg-[#F2ECE1] text-[#1C1917] border border-[#D6D0C7] text-xs font-semibold px-5 py-2.5 rounded transition"
+        >
+          Katalog Semua Layanan
+        </a>
+        <a
+          href="https://wa.me/6281398079090"
+          target="_blank"
+          rel="noopener"
+          class="bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-semibold px-5 py-2.5 rounded transition"
+        >
+          Hubungi Tim via WhatsApp
+        </a>
+      </div>
+
+      <div class="bg-white border border-[#E7E2D9] rounded p-6 sm:p-8 text-left max-w-2xl mx-auto">
+        <h2 class="text-sm font-bold text-[#1C1917] uppercase tracking-wider mb-4 text-center sm:text-left">
+          Layanan Unggulan Kami:
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {services.map((svc) => (
+            <a
+              href={`/layanan/${svc.slug}`}
+              class="block p-3 rounded border border-[#E7E2D9] bg-[#FAF8F5] hover:border-[#C8371B] hover:text-[#C8371B] transition text-xs font-medium text-[#1C1917]"
+            >
+              &rarr; {svc.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

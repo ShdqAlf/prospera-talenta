@@ -5,13 +5,15 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
-  schema?: Record<string, any>;
+  image?: string;
+  schema?: Record<string, any> | Record<string, any>[];
 }
 
 const {
   title,
   description = 'PT Prospera Talenta - Agensi pengadaan dan pengelolaan jasa sales B2B skala nasional. Penyedia tim direct sales, SPG usher, KOL visit, mystery shopper, dan riset pasar.',
   canonical,
+  image = 'https://prosperatalenta.co.id/og-image.png',
   schema,
 } = Astro.props;
 
@@ -73,6 +75,9 @@ const orgSchema = {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={`${title} | PT Prospera Talenta`} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="id_ID" />
 
     <!-- Twitter -->
@@ -80,12 +85,17 @@ const orgSchema = {
     <meta property="twitter:url" content={canonicalUrl} />
     <meta property="twitter:title" content={`${title} | PT Prospera Talenta`} />
     <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
-    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+    {schema && (
+      Array.isArray(schema)
+        ? schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
+        : <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
   </head>
   <body class="bg-[#FAF8F5] text-[#1C1917] antialiased">
     <!-- Utility Bar -->

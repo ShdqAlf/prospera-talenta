@@ -31,4 +31,4 @@ Canvasser profesional mendokumentasikan setiap kunjungan dengan:
 - Titik koordinat GPS saat check-in.
 - Catatan alasan penolakan (*objection handling notes*) untuk evaluasi produk.
 
-Dengan tim lapangan yang terlatih, penetrasi produk Anda ke ratusan titik ritel baru dapat tercapai secara konsisten setiap bulannya.
+Dengan tim lapangan yang terlatih, penetrasi produk Anda ke ratusan titik ritel baru dapat tercapai secara konsisten setiap bulannya. Jika perusahaan Anda membutuhkan percepatan akuisisi merchant tanpa beban rekrutmen internal, pelajari bagaimana layanan [jasa direct sales](/layanan/jasa-direct-sales) PT Prospera Talenta menyediakan tim canvasser terlatih lengkap dengan supervisi harian.

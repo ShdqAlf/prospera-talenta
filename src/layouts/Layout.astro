@@ -21,13 +21,16 @@ const canonicalUrl = canonical || new URL(currentPath, siteUrl).toString();
 
 const orgSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'LocalBusiness',
   name: 'PT Prospera Talenta',
+  alternateName: 'Jasa Sales PT Prospera Talenta',
   url: siteUrl,
   logo: `${siteUrl}/favicon.svg`,
+  image: `${siteUrl}/favicon.svg`,
   description: description,
   telephone: '+6281398079090',
   email: 'jasasalesprospera@gmail.com',
+  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Buana Subang Kencana, Blk. D No.29, Karanganyar',
@@ -36,6 +39,23 @@ const orgSchema = {
     postalCode: '41211',
     addressCountry: 'ID',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -6.5684,
+    longitude: 107.7584,
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Indonesia',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:30',
+      closes: '17:30',
+    },
+  ],
 };
 ---
 

@@ -83,9 +83,6 @@ const breadcrumbSchema = {
       </nav>
 
       <div class="max-w-3xl">
-        <p class="text-xs font-semibold uppercase tracking-wider text-[#C8371B] mb-2">
-          {service.categoryLabel}
-        </p>
         <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1C1917] tracking-tight mb-4">
           {service.title}
         </h1>
@@ -179,8 +176,7 @@ const breadcrumbSchema = {
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {service.workflow.map((w) => (
                 <div class="p-4 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
-                  <span class="text-xs font-mono font-bold text-[#C8371B] block mb-1">LANGKAH {w.step}</span>
-                  <h3 class="text-xs font-bold text-[#1C1917] mb-1">{w.title}</h3>
+                  <h3 class="text-xs font-bold text-[#1C1917] mb-1">{w.step}. {w.title}</h3>
                   <p class="text-xs text-[#57534E] leading-relaxed">{w.desc}</p>
                 </div>
               ))}
@@ -190,16 +186,12 @@ const breadcrumbSchema = {
           <!-- Target Industries -->
           {service.targetIndustries.length > 0 && (
             <div>
-              <h2 class="text-sm font-bold text-[#1C1917] uppercase tracking-wider mb-2">
+              <h2 class="text-sm font-bold text-[#1C1917] mb-2">
                 Sektor Industri yang Sesuai:
               </h2>
-              <div class="flex flex-wrap gap-2">
-                {service.targetIndustries.map((ind) => (
-                  <span class="px-3 py-1 bg-[#FAF8F5] text-[#57534E] text-xs border border-[#E7E2D9] rounded">
-                    {ind}
-                  </span>
-                ))}
-              </div>
+              <p class="text-xs text-[#57534E] leading-relaxed">
+                {service.targetIndustries.join(' • ')}
+              </p>
             </div>
           )}
 

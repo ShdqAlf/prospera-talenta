@@ -47,6 +47,65 @@ const homeFaqSchema = {
     },
   ],
 };
+
+const featuredDocs = [
+  {
+    type: 'video',
+    src: '/kol-visit/kol-visit-1.mp4',
+    service: 'Jasa KOL Visit',
+    title: 'Review Kuliner & Suasana Outlet',
+    link: '/layanan/jasa-kol-visit',
+  },
+  {
+    type: 'video',
+    src: '/kol-visit/kol-visit-2.mp4',
+    service: 'Jasa KOL Visit',
+    title: 'Liputan Pengalaman Santap On-Site',
+    link: '/layanan/jasa-kol-visit',
+  },
+  {
+    type: 'image',
+    src: '/spg/spg-event-1-fix.jpg',
+    service: 'Jasa SPG Usher',
+    title: 'SPG Booth Pameran B2B & Konsumen',
+    link: '/layanan/jasa-spg-usher',
+  },
+  {
+    type: 'image',
+    src: '/spg/spg-event-2-fix.jpg',
+    service: 'Jasa SPG Usher',
+    title: 'Usher Registrasi & Protokol Acara',
+    link: '/layanan/jasa-spg-usher',
+  },
+  {
+    type: 'image',
+    src: '/mystery-shopper/jasa-mystery-shopper-1.webp',
+    service: 'Jasa Mystery Shopper',
+    title: 'Audit Fasilitas & Kebersihan Gerai',
+    link: '/layanan/jasa-mystery-shopper',
+  },
+  {
+    type: 'image',
+    src: '/mystery-shopper/jasa-mystery-shopper-2.webp',
+    service: 'Jasa Mystery Shopper',
+    title: 'Evaluasi Pelayanan & Keramahan Kasir',
+    link: '/layanan/jasa-mystery-shopper',
+  },
+  {
+    type: 'image',
+    src: '/riset-pasar/jasa-riset-pasar-1.webp',
+    service: 'Jasa Riset Pasar',
+    title: 'Wawancara Konsumen & Uji Preferensi',
+    link: '/layanan/jasa-riset-pasar',
+  },
+  {
+    type: 'image',
+    src: '/sebar-kuesioner/jasa-sebar-kuesioner.webp',
+    service: 'Jasa Sebar Kuesioner',
+    title: 'Survei Responden Valid Lapangan',
+    link: '/layanan/jasa-sebar-kuesioner',
+  },
+];
 ---
 
 <Layout
@@ -75,10 +134,19 @@ const homeFaqSchema = {
             Konsultasi Kebutuhan Jasa Sales
           </a>
           <a
-            href="/layanan"
-            class="bg-white hover:bg-[#F4EFEB] text-[#1C1917] border border-[#E7E2D9] font-medium text-sm px-5 py-3 rounded transition"
+            href="#dokumentasi"
+            class="bg-white hover:bg-[#F4EFEB] text-[#1C1917] border border-[#E7E2D9] font-medium text-sm px-5 py-3 rounded transition inline-flex items-center gap-2 shadow-xs"
           >
-            Lihat Katalog Layanan
+            <svg class="w-4 h-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span>Lihat Dokumentasi</span>
+          </a>
+          <a
+            href="/layanan"
+            class="text-[#57534E] hover:text-[#1C1917] font-medium text-sm px-3 py-3 transition"
+          >
+            Lihat Katalog Layanan &rarr;
           </a>
         </div>
       </div>
@@ -230,6 +298,79 @@ const homeFaqSchema = {
             Pengerahan tim serentak ke lapangan didampingi supervisor dengan pelaporan berkala dan evaluasi berkala.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Dokumentasi & Portofolio Lapangan -->
+  <section id="dokumentasi" class="py-16 bg-[#FAF8F5] border-b border-[#E7E2D9] scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#1C1917] tracking-tight mb-2">
+            Dokumentasi & Portofolio Penugasan Lapangan
+          </h2>
+          <p class="text-sm text-[#57534E] max-w-2xl leading-relaxed">
+            Bukti nyata pelaksanaan penugasan komersial dan aktivasi talenta PT Prospera Talenta di berbagai sektor industri dan kota di Indonesia.
+          </p>
+        </div>
+        <a
+          href="/layanan"
+          class="text-xs font-semibold text-[#C8371B] hover:underline self-start sm:self-auto"
+        >
+          Lihat Semua Layanan & Portofolio &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {featuredDocs.map((item) => (
+          <div class="bg-white border border-[#E7E2D9] rounded-lg overflow-hidden shadow-xs flex flex-col justify-between group">
+            {item.type === 'video' ? (
+              <div class="relative bg-black aspect-[9/16] overflow-hidden">
+                <video
+                  controls
+                  playsinline
+                  preload="metadata"
+                  class="w-full h-full object-cover"
+                >
+                  <source src={item.src} type="video/mp4" />
+                  Browser Anda tidak mendukung pemutar video.
+                </video>
+              </div>
+            ) : (
+              <div class="aspect-square bg-[#FAF8F5] overflow-hidden">
+                <img
+                  src={item.src}
+                  alt={`${item.title} - ${item.service} PT Prospera Talenta`}
+                  loading="lazy"
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              </div>
+            )}
+            <div class="p-4 flex flex-col justify-between flex-1">
+              <div>
+                <a
+                  href={item.link}
+                  class="text-[11px] font-semibold text-[#C8371B] hover:underline uppercase tracking-wider block mb-1"
+                >
+                  {item.service}
+                </a>
+                <h3 class="text-xs font-bold text-[#1C1917] leading-snug">
+                  {item.title}
+                </h3>
+              </div>
+              <div class="pt-3 mt-3 border-t border-[#E7E2D9]">
+                <a
+                  href={item.link}
+                  class="text-xs font-medium text-[#57534E] hover:text-[#C8371B] inline-flex items-center gap-1"
+                >
+                  <span>Detail Layanan</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>

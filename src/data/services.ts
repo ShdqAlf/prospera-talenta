@@ -1,4 +1,12 @@
+export interface MediaDocumentation {
+  type: 'image' | 'video';
+  src: string;
+  title: string;
+  caption?: string;
+}
+
 export interface ServiceItem {
+  documentation?: MediaDocumentation[];
   slug: string;
   keyword: string;
   category: 'offline' | 'digital' | 'event' | 'crowd';
@@ -95,6 +103,32 @@ export const services: ServiceItem[] = [
       'Peralatan Rumah Tangga',
       'Fintech & Keagenan Keuangan'
     ],
+        documentation: [
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-4.webp',
+        title: 'Penetrasi Canvassing Lapangan',
+        caption: 'Tim direct sales berinteraksi langsung dengan pemilik gerai dan konsumen retail.'
+      },
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-4.webp',
+        title: 'Edukasi Produk Tatap Muka',
+        caption: 'Demonstrasi keunggulan produk dan presentasi fitur langsung kepada calon pelanggan.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-7.webp',
+        title: 'Penyisiran Rute Journey Plan',
+        caption: 'Supervisi tim sales menyusuri area pemetaan harian dengan presensi berbasis GPS.'
+      },
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-2.webp',
+        title: 'Akuisisi Merchant & Pelanggan Baru',
+        caption: 'Pendataan identitas prospek dan penutupan transaksi secara langsung di lapangan.'
+      }
+    ],
     faqs: [
       {
         question: 'Apa itu jasa direct sales dan bagaimana mekanisme kerjanya?',
@@ -181,6 +215,32 @@ export const services: ServiceItem[] = [
       'Hotel, Resort & Destinasi Wisata',
       'Butik Fashion & Lifestyle',
       'Taman Hiburan & Event Festival'
+    ],
+        documentation: [
+      {
+        type: 'video',
+        src: '/kol-visit/kol-visit-1.mp4',
+        title: 'Review Kuliner & Suasana Outlet',
+        caption: 'Dokumentasi kunjungan KOL on-site untuk mengulas menu dan atmosfer resto mitra.'
+      },
+      {
+        type: 'video',
+        src: '/kol-visit/kol-visit-2.mp4',
+        title: 'Liputan Pengalaman Santap Langsung',
+        caption: 'Pembuatan konten video vertikal autentik untuk mendorong traffic penonton Reels dan TikTok.'
+      },
+      {
+        type: 'video',
+        src: '/kol-visit/kol-visit-3.mp4',
+        title: 'Aktivasi Keramaian Gerai On-Site',
+        caption: 'Pemicu antrean dan eksposur visual yang memperkuat reputasi tempat di media sosial.'
+      },
+      {
+        type: 'video',
+        src: '/kol-visit/kol-visit-4.mp4',
+        title: 'Ulasan Produk & Tagging Lokasi Gerai',
+        caption: 'Penyampaian review positif dengan tag lokasi untuk mendongkrak pencarian Google Maps.'
+      }
     ],
     faqs: [
       {
@@ -269,6 +329,38 @@ export const services: ServiceItem[] = [
       'Pengembang Perumahan & Properti',
       'Perbankan, Asuransi & Fintech'
     ],
+        documentation: [
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-1.webp',
+        title: 'Wawancara Langsung Konsumen Lapangan',
+        caption: 'Pendekatan personal surveyor untuk menggali preferensi merek dan persepsi produk.'
+      },
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-2.webp',
+        title: 'Pencatatan Data Responden Terverifikasi',
+        caption: 'Survei tatap muka dengan target profil demografi yang telah dikurasi ketat.'
+      },
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-3.webp',
+        title: 'Uji Respon & Preferensi Produk Baru',
+        caption: 'Pengambilan sampel reaksi pembeli terhadap rasa, kemasan, dan harga di area komersial.'
+      },
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-4.webp',
+        title: 'Survei Lapangan di Titik Keramaian',
+        caption: 'Pengumpulan opini responden pada lokasi strategis seperti sentra niaga dan pasar retail.'
+      },
+      {
+        type: 'image',
+        src: '/riset-pasar/jasa-riset-pasar-5.webp',
+        title: 'Validasi Data & Kontrol Kualitas Riset',
+        caption: 'Pemeriksaan integritas jawaban responden sebelum diproses ke tabulasi analitik.'
+      }
+    ],
     faqs: [
       {
         question: 'Mengapa riset lapangan tatap muka lebih unggul dibanding survei online mandiri?',
@@ -355,6 +447,44 @@ export const services: ServiceItem[] = [
       'Klinik Kesehatan & Kecantikan',
       'Showroom Dealer & Bengkel Resmi Otomotif',
       'Perbankan & Lembaga Keuangan'
+    ],
+        documentation: [
+      {
+        type: 'image',
+        src: '/mystery-shopper/jasa-mystery-shopper-1.webp',
+        title: 'Audit Fasilitas & Kebersihan Gerai',
+        caption: 'Pemeriksaan standar visual, kerapian rak, dan kenyamanan outlet ritel.'
+      },
+      {
+        type: 'image',
+        src: '/mystery-shopper/jasa-mystery-shopper-2.webp',
+        title: 'Evaluasi Keramahan & Greeting Staff',
+        caption: 'Uji kepatuhan greeting, senyum, dan etika komunikasi frontliner terhadap pembeli.'
+      },
+      {
+        type: 'image',
+        src: '/mystery-shopper/jasa-mystery-shopper-3.webp',
+        title: 'Penilaian Pengetahuan Produk Pramuniaga',
+        caption: 'Evaluasi kemampuan staf toko dalam menjelaskan spesifikasi dan keunggulan barang.'
+      },
+      {
+        type: 'image',
+        src: '/mystery-shopper/jasa-mystery-shopper-4.webp',
+        title: 'Audit Kecepatan Pelayanan di Kasir',
+        caption: 'Pencatatan waktu tunggu antrean transaksi dan ketepatan penyerahan struk belanja.'
+      },
+      {
+        type: 'image',
+        src: '/mystery-shopper/jasa-mystery-shopper-5.webp',
+        title: 'Dokumentasi Kondisi Titik Display',
+        caption: 'Verifikasi penataan produk dan materi promosi sesuai panduan merchandising pusat.'
+      },
+      {
+        type: 'image',
+        src: '/mystery-shopper/jasa-mystery-shopper-6.webp',
+        title: 'Penyusunan Form Checklist Objektif',
+        caption: 'Rekapitulasi scoring kepatuhan SOP cabang untuk laporan evaluasi manajemen.'
+      }
     ],
     faqs: [
       {
@@ -443,6 +573,56 @@ export const services: ServiceItem[] = [
       'Perbankan, Asuransi & Investasi',
       'Konser Musik, Expo & Seminar Korporat'
     ],
+        documentation: [
+      {
+        type: 'image',
+        src: '/spg/spg-event-1-fix.jpg',
+        title: 'SPG Booth Pameran B2B & Konsumen',
+        caption: 'Talenta SPG profesional bertugas di area booth pameran dan expo komersial.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-2-fix.jpg',
+        title: 'Usher Registrasi Acara Perusahaan',
+        caption: 'Penyambutan tamu undangan formal, protokol VIP, dan pendataan registrasi.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-3-fix.jpg',
+        title: 'SPG Edukasi Produk & Sampling',
+        caption: 'Demonstrasi keunggulan produk dan pembagian sampel langsung ke calon pembeli.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-4-fix.jpg',
+        title: 'Tim SPG Pameran & Aktivasi Mal',
+        caption: 'Aktivasi gerai di pusat perbelanjaan dengan standar penampilan rapi dan prima.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-5-fix.jpg',
+        title: 'SPG Launching Produk & Roadshow',
+        caption: 'Mendukung momentum peluncuran produk baru dengan daya tarik komunikasi persuasif.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-6-fix.jpg',
+        title: 'Penjualan Langsung di Stand Event',
+        caption: 'Mendorong pencapaian target penjualan on-the-spot selama kegiatan berlangsung.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-7-fix.jpg',
+        title: 'Brand Ambassador Festival & Konser',
+        caption: 'Menjaga citra brand tetap atraktif di tengah keramaian pengunjung event hiburan.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-9-fix.jpg',
+        title: 'Usher Gathering & Gala Dinner',
+        caption: 'Pendampingan acara formal korporasi dengan keramahan dan etika profesional tinggi.'
+      }
+    ],
     faqs: [
       {
         question: 'Apa perbedaan antara SPG Event dan Usher?',
@@ -529,6 +709,56 @@ export const services: ServiceItem[] = [
       'Startup Digital & Pengembang Aplikasi',
       'Perusahaan FMCG & Ritel Konsumen',
       'Instansi Publik & Kebijakan Sosial'
+    ],
+        documentation: [
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner.webp',
+        title: 'Pendampingan Pengisian Kuesioner',
+        caption: 'Surveyor mendampingi responden mengisi instrumen kuesioner secara objektif.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-2.webp',
+        title: 'Screening Kriteria Target Responden',
+        caption: 'Memastikan responden memenuhi profil usia, profesi, dan kebiasaan belanja yang dicari.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-3.webp',
+        title: 'Penjaringan Responden di Area Publik',
+        caption: 'Penyebaran survei di pusat perbelanjaan, taman publik, dan pusat kegiatan masyarakat.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-4.webp',
+        title: 'Survei Form Digital & Cetak',
+        caption: 'Fleksibilitas metode input data real-time via smartphone/tablet maupun lembar fisik.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-5.webp',
+        title: 'Wawancara Survei Tatap Muka',
+        caption: 'Eksplorasi jawaban kualitatif responden untuk melengkapi data angka statistik.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-6.webp',
+        title: 'Penyerahan Apresiasi & Souvenir',
+        caption: 'Pemberian merchandise apresiasi kepada responden yang telah mengisi kuesioner lengkap.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-7.webp',
+        title: 'Penyisiran Titik Responden Multi-Area',
+        caption: 'Pergerakan tim surveyor menjangkau berbagai titik target secara terorganisir.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-8.webp',
+        title: 'Rekapitulasi Data Responden Harian',
+        caption: 'Penyusunan dataset jawaban kuesioner siap olah untuk kebutuhan riset klien.'
+      }
     ],
     faqs: [
       {

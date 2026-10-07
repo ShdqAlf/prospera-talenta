@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'PT Prospera Talenta - Agensi pengadaan dan pengelolaan tenaga penjualan (sales force) B2B skala nasional. Penyedia 38.000+ talenta SPG/SPB, canvassing lapangan, akuisisi user, dan digital growth.',
+  description = 'PT Prospera Talenta - Agensi pengadaan dan pengelolaan jasa sales B2B skala nasional. Penyedia tim direct sales, SPG usher, KOL visit, mystery shopper, dan riset pasar.',
   canonical,
   schema,
 } = Astro.props;
@@ -74,7 +74,7 @@ const orgSchema = {
         <div class="flex items-center gap-3">
           <span class="text-[#FAF8F5] font-medium">PT Prospera Talenta</span>
           <span class="text-[#57534E]">|</span>
-          <span class="text-[#A8A29E]">Mitra Pengadaan Sales Force & Talenta B2B</span>
+          <span class="text-[#A8A29E]">Mitra Pengadaan Jasa Sales & Talenta B2B</span>
         </div>
         <div class="flex items-center gap-4 text-[#A8A29E]">
           <a href="mailto:jasasalesprospera@gmail.com" class="hover:text-[#FAF8F5] transition">jasasalesprospera@gmail.com</a>
@@ -100,9 +100,47 @@ const orgSchema = {
         <!-- Desktop Menu -->
         <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-[#44403C]">
           <a href="/" class={`hover:text-[#C8371B] transition ${currentPath === '/' ? 'text-[#C8371B] font-semibold' : ''}`}>Beranda</a>
-          <a href="/layanan" class={`hover:text-[#C8371B] transition ${currentPath.startsWith('/layanan') ? 'text-[#C8371B] font-semibold' : ''}`}>Layanan</a>
-          <a href="/layanan/spg-spb-event" class="hover:text-[#C8371B] transition">SPG/SPB</a>
-          <a href="/layanan/direct-sales-canvassing" class="hover:text-[#C8371B] transition">Canvassing</a>
+
+          <!-- Dropdown Layanan -->
+          <div class="relative group">
+            <a
+              href="/layanan"
+              class={`flex items-center gap-1.5 hover:text-[#C8371B] transition py-2 ${currentPath.startsWith('/layanan') ? 'text-[#C8371B] font-semibold' : ''}`}
+            >
+              <span>Layanan</span>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+
+            <div class="absolute left-0 top-full pt-1.5 w-64 hidden group-hover:block group-focus-within:block z-50">
+              <div class="bg-white border border-[#E7E2D9] rounded-lg shadow-xl py-2 overflow-hidden">
+                <a href="/layanan/jasa-direct-sales" class="block px-4 py-2 hover:bg-[#FAF8F5] text-xs font-medium text-[#1C1917] hover:text-[#C8371B] transition">
+                  Jasa Direct Sales
+                </a>
+                <a href="/layanan/jasa-kol-visit" class="block px-4 py-2 hover:bg-[#FAF8F5] text-xs font-medium text-[#1C1917] hover:text-[#C8371B] transition">
+                  Jasa KOL Visit
+                </a>
+                <a href="/layanan/jasa-riset-pasar" class="block px-4 py-2 hover:bg-[#FAF8F5] text-xs font-medium text-[#1C1917] hover:text-[#C8371B] transition">
+                  Jasa Riset Pasar
+                </a>
+                <a href="/layanan/jasa-mystery-shopper" class="block px-4 py-2 hover:bg-[#FAF8F5] text-xs font-medium text-[#1C1917] hover:text-[#C8371B] transition">
+                  Jasa Mystery Shopper
+                </a>
+                <a href="/layanan/jasa-spg-usher" class="block px-4 py-2 hover:bg-[#FAF8F5] text-xs font-medium text-[#1C1917] hover:text-[#C8371B] transition">
+                  Jasa SPG Usher
+                </a>
+                <a href="/layanan/jasa-sebar-kuesioner" class="block px-4 py-2 hover:bg-[#FAF8F5] text-xs font-medium text-[#1C1917] hover:text-[#C8371B] transition">
+                  Jasa Sebar Kuesioner
+                </a>
+                <div class="border-t border-[#E7E2D9] my-1.5"></div>
+                <a href="/layanan" class="block px-4 py-1.5 text-[11px] font-semibold text-[#78716C] hover:text-[#C8371B] transition">
+                  Lihat Semua Layanan &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
           <a href="/artikel" class={`hover:text-[#C8371B] transition ${currentPath.startsWith('/artikel') ? 'text-[#C8371B] font-semibold' : ''}`}>Artikel</a>
           <a href="/tentang" class={`hover:text-[#C8371B] transition ${currentPath === '/tentang' ? 'text-[#C8371B] font-semibold' : ''}`}>Tentang</a>
           <a href="/kontak" class={`hover:text-[#C8371B] transition ${currentPath === '/kontak' ? 'text-[#C8371B] font-semibold' : ''}`}>Kontak</a>
@@ -111,7 +149,7 @@ const orgSchema = {
         <!-- Right Action Button -->
         <div class="hidden sm:flex items-center">
           <a
-            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20konsultasi%20kebutuhan%20sales%20force%20perusahaan."
+            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20konsultasi%20kebutuhan%20jasa%20sales%20perusahaan."
             target="_blank"
             rel="noopener"
             class="bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold px-4 py-2.5 rounded transition"
@@ -129,18 +167,28 @@ const orgSchema = {
       </div>
 
       <!-- Mobile Dropdown -->
-      <div id="mobile-dropdown" class="hidden md:hidden border-t border-[#E7E2D9] bg-[#FAF8F5] px-4 py-4 space-y-2 text-sm">
-        <a href="/" class="block py-1.5 font-medium text-[#1C1917]">Beranda</a>
-        <a href="/layanan" class="block py-1.5 font-medium text-[#1C1917]">Katalog Layanan</a>
-        <a href="/layanan/spg-spb-event" class="block py-1 text-xs text-[#57534E] pl-2">↳ Jasa SPG/SPB</a>
-        <a href="/layanan/direct-sales-canvassing" class="block py-1 text-xs text-[#57534E] pl-2">↳ Direct Sales & Canvassing</a>
-        <a href="/layanan/clipper-short-video" class="block py-1 text-xs text-[#57534E] pl-2">↳ Clipper Video</a>
-        <a href="/artikel" class="block py-1.5 font-medium text-[#1C1917]">Artikel & Wawasan</a>
-        <a href="/tentang" class="block py-1.5 font-medium text-[#1C1917]">Tentang Kami</a>
-        <a href="/kontak" class="block py-1.5 font-medium text-[#1C1917]">Kontak</a>
+      <div id="mobile-dropdown" class="hidden md:hidden border-t border-[#E7E2D9] bg-[#FAF8F5] px-4 py-4 space-y-3 text-sm">
+        <a href="/" class="block py-1 font-medium text-[#1C1917]">Beranda</a>
+
+        <div class="space-y-1.5 pt-1">
+          <div class="font-semibold text-xs uppercase tracking-wider text-[#78716C]">Layanan Kami</div>
+          <div class="pl-2 border-l-2 border-[#E7E2D9] space-y-2 text-xs">
+            <a href="/layanan/jasa-direct-sales" class="block text-[#1C1917] hover:text-[#C8371B]">Jasa Direct Sales</a>
+            <a href="/layanan/jasa-kol-visit" class="block text-[#1C1917] hover:text-[#C8371B]">Jasa KOL Visit</a>
+            <a href="/layanan/jasa-riset-pasar" class="block text-[#1C1917] hover:text-[#C8371B]">Jasa Riset Pasar</a>
+            <a href="/layanan/jasa-mystery-shopper" class="block text-[#1C1917] hover:text-[#C8371B]">Jasa Mystery Shopper</a>
+            <a href="/layanan/jasa-spg-usher" class="block text-[#1C1917] hover:text-[#C8371B]">Jasa SPG Usher</a>
+            <a href="/layanan/jasa-sebar-kuesioner" class="block text-[#1C1917] hover:text-[#C8371B]">Jasa Sebar Kuesioner</a>
+            <a href="/layanan" class="block font-semibold text-[#C8371B] pt-1">Semua Katalog Layanan &rarr;</a>
+          </div>
+        </div>
+
+        <a href="/artikel" class="block py-1 font-medium text-[#1C1917]">Artikel & Wawasan</a>
+        <a href="/tentang" class="block py-1 font-medium text-[#1C1917]">Tentang Kami</a>
+        <a href="/kontak" class="block py-1 font-medium text-[#1C1917]">Kontak</a>
         <div class="pt-2">
           <a
-            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20konsultasi."
+            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20konsultasi%20jasa%20sales."
             target="_blank"
             rel="noopener"
             class="block text-center bg-[#C8371B] text-[#FAF8F5] py-2 rounded text-xs font-semibold"
@@ -158,7 +206,7 @@ const orgSchema = {
     <!-- Discreet WhatsApp Float -->
     <aside class="fixed bottom-5 right-5 z-50">
       <a
-        href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20tanya%20layanan%20sales."
+        href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20saya%20ingin%20tanya%20layanan%20jasa%20sales."
         target="_blank"
         rel="noopener"
         class="flex items-center gap-2 bg-[#1C1917] hover:bg-[#C8371B] text-[#FAF8F5] px-3.5 py-2.5 rounded shadow text-xs font-medium transition"
@@ -176,31 +224,21 @@ const orgSchema = {
           <div class="md:col-span-1">
             <span class="text-sm font-bold text-[#FAF8F5] tracking-tight block mb-2">PT PROSPERA TALENTA</span>
             <p class="leading-relaxed text-[#78716C] mb-4">
-              Penyedia dan pengelola tenaga penjualan lapangan serta talenta digital B2B terstruktur di Indonesia.
+              Penyedia dan pengelola jasa sales lapangan, SPG usher, mystery shopper, dan riset pasar B2B terstruktur di Indonesia.
             </p>
             <p class="text-[#78716C]">prosperatalenta.co.id</p>
           </div>
 
-          <div>
-            <p class="font-semibold text-[#FAF8F5] uppercase tracking-wider mb-3">Layanan Lapangan</p>
-            <ul class="space-y-2">
-              <li><a href="/layanan/spg-spb-event" class="hover:text-[#FAF8F5] transition">SPG & SPB Event</a></li>
-              <li><a href="/layanan/direct-sales-canvassing" class="hover:text-[#FAF8F5] transition">Direct Sales & Canvassing</a></li>
-              <li><a href="/layanan/sales-aplikasi-fintech" class="hover:text-[#FAF8F5] transition">Sales Aplikasi Mobile</a></li>
-              <li><a href="/layanan/mystery-shopper-audit" class="hover:text-[#FAF8F5] transition">Mystery Shopper</a></li>
-              <li><a href="/layanan/crew-event-organizer" class="hover:text-[#FAF8F5] transition">Crew Event & Usher</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="font-semibold text-[#FAF8F5] uppercase tracking-wider mb-3">Layanan Digital</p>
-            <ul class="space-y-2">
-              <li><a href="/layanan/clipper-short-video" class="hover:text-[#FAF8F5] transition">Clipper Video TikTok/Reels</a></li>
-              <li><a href="/layanan/buzzer-dan-kol-activation" class="hover:text-[#FAF8F5] transition">Buzzer & Micro KOL</a></li>
-              <li><a href="/layanan/rating-review-google-marketplace" class="hover:text-[#FAF8F5] transition">Rating & Review Organik</a></li>
-              <li><a href="/layanan/host-live-streaming" class="hover:text-[#FAF8F5] transition">Host Live Streaming</a></li>
-              <li><a href="/layanan/aktivasi-komunitas-crowd" class="hover:text-[#FAF8F5] transition">Aktivasi Komunitas</a></li>
-            </ul>
+          <div class="md:col-span-2">
+            <p class="font-semibold text-[#FAF8F5] uppercase tracking-wider mb-3">Layanan Kami</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div><a href="/layanan/jasa-direct-sales" class="hover:text-[#FAF8F5] transition">Jasa Direct Sales</a></div>
+              <div><a href="/layanan/jasa-kol-visit" class="hover:text-[#FAF8F5] transition">Jasa KOL Visit</a></div>
+              <div><a href="/layanan/jasa-riset-pasar" class="hover:text-[#FAF8F5] transition">Jasa Riset Pasar</a></div>
+              <div><a href="/layanan/jasa-mystery-shopper" class="hover:text-[#FAF8F5] transition">Jasa Mystery Shopper</a></div>
+              <div><a href="/layanan/jasa-spg-usher" class="hover:text-[#FAF8F5] transition">Jasa SPG Usher</a></div>
+              <div><a href="/layanan/jasa-sebar-kuesioner" class="hover:text-[#FAF8F5] transition">Jasa Sebar Kuesioner</a></div>
+            </div>
           </div>
 
           <div>

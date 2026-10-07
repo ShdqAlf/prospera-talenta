@@ -2,19 +2,56 @@
 import Layout from '../layouts/Layout.astro';
 import { services } from '../data/services';
 
-const featuredServices = services.slice(0, 6);
-
 const homeSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'PT Prospera Talenta',
   url: 'https://prosperatalenta.co.id',
 };
+
+const homeFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Apa itu jasa sales dari PT Prospera Talenta?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Jasa sales adalah layanan outsourcing pengadaan, pelatihan, dan pengelolaan tim tenaga penjual lapangan profesional (sales force) untuk membantu perusahaan memperluas penetrasi pasar, akuisisi pelanggan, dan peningkatan omzet transaksi.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Layanan apa saja yang termasuk dalam jasa sales kami?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Kami menyediakan enam solusi utama: Jasa Direct Sales, Jasa KOL Visit, Jasa Riset Pasar, Jasa Mystery Shopper, Jasa SPG Usher, dan Jasa Sebar Kuesioner.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Di kota mana saja layanan jasa sales ini tersedia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Jasa sales PT Prospera Talenta menjangkau lebih dari 50 kota di seluruh Indonesia, termasuk Jabodetabek, Bandung, Surabaya, Semarang, Medan, Makassar, Denpasar, dan kota-kota sekitarnya.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Bagaimana sistem kontrak dan legalitas kerjasama jasa sales?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Seluruh kerjasama dilakukan secara legal B2B di bawah naungan PT Prospera Talenta, lengkap dengan perjanjian kontrak resmi, non-disclosure agreement (NDA), dan faktur pajak perusahaan.',
+      },
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Mitra Pengadaan Sales Force & Talenta B2B Skala Nasional"
-  description="PT Prospera Talenta mengelola 38.000+ talenta sales lapangan dan digital di 50+ kota Indonesia. Solusi SPG/SPB, canvassing, mystery shopper, dan akuisisi pasar."
+  title="Jasa Sales Lapangan & Outsourcing Sales B2B Terpercaya"
+  description="Mencari penyedia jasa sales profesional? PT Prospera Talenta menyediakan outsourcing jasa sales lapangan, direct sales, SPG, dan riset pasar di Indonesia."
   schema={homeSchema}
 >
   <!-- Hero Section -->
@@ -22,34 +59,34 @@ const homeSchema = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-3xl">
         <p class="text-xs font-semibold tracking-wider uppercase text-[#C8371B] mb-3">
-          Corporate Sales Force Management
+          Penyedia Jasa Sales & Outsourcing B2B Nasional
         </p>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] tracking-tight leading-[1.18] mb-5">
-          Pengadaan dan Pengelolaan Tim Sales Lapangan untuk Perusahaan Anda.
+          Jasa Sales Lapangan Profesional dan Terkelola untuk Pertumbuhan Bisnis Anda.
         </h1>
         <p class="text-base sm:text-lg text-[#57534E] leading-relaxed mb-8">
-          PT Prospera Talenta menyediakan infrastruktur tenaga penjualan terkelola di 50+ kota Indonesia. Didukung jaringan 38.000+ talenta terlatih untuk penetrasi pasar modern trade, general trade, event aktivasi, dan ekspansi digital.
+          Mencari penyedia jasa sales yang siap mendongkrak omzet dan memperluas distribusi produk perusahaan Anda? PT Prospera Talenta hadir sebagai mitra terpercaya penyedia jasa sales lapangan dan outsourcing komersial B2B di lebih dari 50 kota di Indonesia. Kami mengelola tenaga penjualan terlatih agar brand Anda dapat fokus pada inovasi produk dan kepuasan pelanggan.
         </p>
 
         <div class="flex flex-wrap items-center gap-3">
           <a
-            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20sales%20force%20perusahaan."
+            href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20jasa%20sales%20perusahaan."
             target="_blank"
             rel="noopener"
             class="bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] font-semibold text-sm px-6 py-3 rounded transition"
           >
-            Konsultasi Kebutuhan
+            Konsultasi Kebutuhan Jasa Sales
           </a>
           <a
             href="/layanan"
             class="bg-white hover:bg-[#F4EFEB] text-[#1C1917] border border-[#E7E2D9] font-medium text-sm px-5 py-3 rounded transition"
           >
-            Daftar Layanan
+            Lihat Katalog Layanan
           </a>
         </div>
       </div>
 
-      <!-- Institutional Metrics -->
+      <!-- Metrics -->
       <div class="mt-14 pt-8 border-t border-[#E7E2D9] grid grid-cols-2 md:grid-cols-4 gap-6">
         <div>
           <span class="text-3xl font-extrabold text-[#1C1917] block">38.000+</span>
@@ -71,40 +108,40 @@ const homeSchema = {
     </div>
   </section>
 
-  <!-- Problem & Operational Model -->
+  <!-- Problem & Value -->
   <section class="py-16 bg-white border-b border-[#E7E2D9]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-2xl mb-12">
         <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-3">
-          Model Operasional Terstruktur
+          Mengapa Bisnis Anda Membutuhkan Jasa Sales Terkelola?
         </h2>
         <p class="text-sm text-[#57534E] leading-relaxed">
-          Kami mengeliminasi friksi rekrutmen internal, fluktuasi turnover tenaga kerja, dan kerumitan supervisi multi-kota.
+          Membangun tim sales internal membutuhkan waktu panjang dan biaya rekrutmen yang tinggi. Selain itu, fluktuasi pergantian karyawan di lapangan sering kali mengganggu pencapaian target. Karena itu, mempercayakan operasional komersial kepada penyedia jasa sales berpengalaman adalah solusi paling efisien.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="border border-[#E7E2D9] rounded p-6 bg-[#FAF8F5]">
-          <p class="text-xs font-mono font-bold text-[#C8371B] mb-2">01 / REKRUTMEN</p>
-          <h3 class="text-base font-bold text-[#1C1917] mb-2">Database Talenta Siap Kerja</h3>
+          <p class="text-xs font-mono font-bold text-[#C8371B] mb-2">01 / REKRUTMEN CEPAT</p>
+          <h3 class="text-base font-bold text-[#1C1917] mb-2">Tanpa Beban HRD Internal</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Seleksi profil sesuai kriteria brand dalam hitungan hari. Tanpa beban administrasi HRD dan payroll jangka panjang.
+            Dapatkan tenaga penjualan siap kerja dalam hitungan hari. Anda terbebas dari kerumitan administrasi BPJS, pesangon, dan penggajian bulanan.
           </p>
         </div>
 
         <div class="border border-[#E7E2D9] rounded p-6 bg-[#FAF8F5]">
-          <p class="text-xs font-mono font-bold text-[#C8371B] mb-2">02 / KONTROL</p>
-          <h3 class="text-base font-bold text-[#1C1917] mb-2">Supervisi Lapangan & GPS</h3>
+          <p class="text-xs font-mono font-bold text-[#C8371B] mb-2">02 / KONTROL LAPANGAN</p>
+          <h3 class="text-base font-bold text-[#1C1917] mb-2">Supervisi & Pelacakan GPS</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Koordinator lapangan memvalidasi kehadiran, eksekusi display produk, dan keakuratan interaksi prospek secara harian.
+            Setiap tim sales didampingi koordinator lapangan untuk memastikan kedisiplinan rute kunjungan, presensi digital, dan kepatuhan SOP brand.
           </p>
         </div>
 
         <div class="border border-[#E7E2D9] rounded p-6 bg-[#FAF8F5]">
-          <p class="text-xs font-mono font-bold text-[#C8371B] mb-2">03 / AKUNTABILITAS</p>
-          <h3 class="text-base font-bold text-[#1C1917] mb-2">Laporan Kinerja Terukur</h3>
+          <p class="text-xs font-mono font-bold text-[#C8371B] mb-2">03 / TARGET TERUKUR</p>
+          <h3 class="text-base font-bold text-[#1C1917] mb-2">Akuntabilitas Laporan Harian</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Rekap kuantitatif sampling, data registrasi, dan transaksi penjualan diserahkan terjadwal untuk audit komersial.
+            Laporan harian menyajikan data kuantitatif omzet, jumlah interaksi calon pembeli, serta database pelanggan baru yang siap diaudit.
           </p>
         </div>
       </div>
@@ -117,19 +154,19 @@ const homeSchema = {
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
         <div>
           <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-1">
-            Layanan Utama
+            Pilihan Solusi Jasa Sales dari PT Prospera Talenta
           </h2>
           <p class="text-xs text-[#78716C]">
-            Solusi yang dapat disesuaikan menurut target industri dan skala proyek.
+            Layanan komprehensif yang dirancang fleksibel sesuai kebutuhan target industri Anda.
           </p>
         </div>
         <a href="/layanan" class="text-xs font-semibold text-[#C8371B] hover:underline">
-          Lihat Semua 10 Layanan &rarr;
+          Lihat Semua 6 Layanan &rarr;
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {featuredServices.map((s) => (
+        {services.map((s) => (
           <div class="bg-white border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
             <div>
               <p class="text-[11px] font-semibold tracking-wider uppercase text-[#78716C] mb-2">
@@ -147,7 +184,7 @@ const homeSchema = {
 
             <div class="pt-4 border-t border-[#E7E2D9] flex items-center justify-between text-xs">
               <a href={`/layanan/${s.slug}`} class="font-medium text-[#1C1917] hover:text-[#C8371B]">
-                Spesifikasi &rarr;
+                Pelajari Layanan &rarr;
               </a>
               <a
                 href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20tanya%20layanan%20${encodeURIComponent(s.title)}.`}
@@ -155,7 +192,7 @@ const homeSchema = {
                 rel="noopener"
                 class="font-semibold text-[#C8371B] hover:text-[#A82B13]"
               >
-                Minta Rate Card
+                Minta Penawaran
               </a>
             </div>
           </div>
@@ -167,40 +204,85 @@ const homeSchema = {
   <!-- Process -->
   <section class="py-16 bg-white border-b border-[#E7E2D9]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-8">
-        Tahapan Kerjasama Kemitraan
+      <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-3">
+        Alur Eksekusi Penugasan Tim Jasa Sales Lapangan
       </h2>
+      <p class="text-sm text-[#57534E] mb-8 max-w-2xl leading-relaxed">
+        Kami menerapkan standarisasi operasional empat langkah agar penugasan berjalan tertib dan mencapai target yang Anda harapkan.
+      </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="border-l-2 border-[#C8371B] pl-4">
           <span class="text-xs font-mono font-bold text-[#78716C]">LANGKAH 01</span>
           <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Analisis Kebutuhan</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Penetapan target penjualan, kriteria talenta, alokasi kota, dan durasi proyek.
+            Menetapkan target penjualan produk, spesifikasi kriteria talenta, alokasi kota sasaran, serta jadwal penugasan.
           </p>
         </div>
 
         <div class="border-l-2 border-[#C8371B] pl-4">
           <span class="text-xs font-mono font-bold text-[#78716C]">LANGKAH 02</span>
-          <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Kurasi Profil</h3>
+          <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Seleksi Kandidat</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Penyajian database kandidat terverifikasi untuk kurasi final oleh tim klien.
+            Menyajikan profil kandidat terverifikasi dari basis data kami untuk kurasi persetujuan akhir dari pihak klien.
           </p>
         </div>
 
         <div class="border-l-2 border-[#C8371B] pl-4">
           <span class="text-xs font-mono font-bold text-[#78716C]">LANGKAH 03</span>
-          <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Briefing SOP</h3>
+          <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Pelatihan SOP Produk</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Pelatihan produk pengetahuan, etika komunikasi brand, dan simulasi lapangan.
+            Briefing intensif mengenai product knowledge, etika komunikasi brand, skrip promosi, dan simulasi lapangan.
           </p>
         </div>
 
         <div class="border-l-2 border-[#C8371B] pl-4">
           <span class="text-xs font-mono font-bold text-[#C8371B]">LANGKAH 04</span>
-          <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Penugasan & Laporan</h3>
+          <h3 class="text-sm font-bold text-[#1C1917] mt-1 mb-1">Penugasan & Evaluasi</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Deploy tim serentak dengan pengawasan harian dan pelaporan berkala.
+            Pengerahan tim serentak ke lapangan didampingi supervisor dengan pelaporan berkala dan evaluasi berkala.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-[#FAF8F5] border-b border-[#E7E2D9]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-2 text-center">
+        Tanya Jawab Seputar Jasa Sales (FAQ)
+      </h2>
+      <p class="text-xs sm:text-sm text-[#57534E] text-center mb-10 max-w-xl mx-auto leading-relaxed">
+        Pertanyaan yang sering diajukan oleh calon mitra korporat mengenai layanan jasa sales kami.
+      </p>
+
+      <div class="space-y-3">
+        <div class="p-5 bg-white border border-[#E7E2D9] rounded">
+          <h3 class="text-sm font-bold text-[#1C1917] mb-1.5">Apa itu jasa sales dari PT Prospera Talenta?</h3>
+          <p class="text-xs text-[#57534E] leading-relaxed">
+            Jasa sales adalah layanan outsourcing pengadaan, pelatihan, dan pengelolaan tim tenaga penjual lapangan profesional (sales force) untuk membantu perusahaan memperluas penetrasi pasar, akuisisi pelanggan, dan peningkatan omzet transaksi secara terkelola.
+          </p>
+        </div>
+
+        <div class="p-5 bg-white border border-[#E7E2D9] rounded">
+          <h3 class="text-sm font-bold text-[#1C1917] mb-1.5">Layanan apa saja yang termasuk dalam cakupan jasa sales kami?</h3>
+          <p class="text-xs text-[#57534E] leading-relaxed">
+            Kami menyediakan enam solusi utama: Jasa Direct Sales, Jasa KOL Visit, Jasa Riset Pasar, Jasa Mystery Shopper, Jasa SPG Usher, dan Jasa Sebar Kuesioner di berbagai kota Indonesia.
+          </p>
+        </div>
+
+        <div class="p-5 bg-white border border-[#E7E2D9] rounded">
+          <h3 class="text-sm font-bold text-[#1C1917] mb-1.5">Di kota mana saja layanan jasa sales ini tersedia?</h3>
+          <p class="text-xs text-[#57534E] leading-relaxed">
+            Jasa sales PT Prospera Talenta menjangkau lebih dari 50 kota di seluruh Indonesia, termasuk Jabodetabek, Bandung, Surabaya, Semarang, Medan, Makassar, Denpasar, dan kota-kota sekitarnya.
+          </p>
+        </div>
+
+        <div class="p-5 bg-white border border-[#E7E2D9] rounded">
+          <h3 class="text-sm font-bold text-[#1C1917] mb-1.5">Bagaimana sistem kontrak dan legalitas kerjasama jasa sales?</h3>
+          <p class="text-xs text-[#57534E] leading-relaxed">
+            Seluruh kerjasama dilakukan secara legal B2B di bawah naungan PT Prospera Talenta, lengkap dengan perjanjian kontrak resmi, non-disclosure agreement (NDA), dan faktur pajak perusahaan.
           </p>
         </div>
       </div>
@@ -208,17 +290,17 @@ const homeSchema = {
   </section>
 
   <!-- Contact CTA -->
-  <section class="py-16 bg-[#FAF8F5]">
+  <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1C1917] tracking-tight mb-4">
-        Konsultasikan Skema Kebutuhan Sales Perusahaan Anda
+        Konsultasikan Kebutuhan Jasa Sales Perusahaan Anda Sekarang
       </h2>
       <p class="text-sm text-[#57534E] mb-8 max-w-xl mx-auto leading-relaxed">
-        Tim representatif PT Prospera Talenta siap menyusun estimasi anggaran dan ketersediaan talenta sesuai target wilayah Anda.
+        Representatif PT Prospera Talenta siap menyusun simulasi anggaran, kebutuhan personel, dan jadwal penugasan sesuai target pasar Anda.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-3">
         <a
-          href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20jadwalkan%20diskusi%20kebutuhan%20sales%20force."
+          href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20jadwalkan%20diskusi%20kebutuhan%20jasa%20sales."
           target="_blank"
           rel="noopener"
           class="bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] font-semibold text-sm px-6 py-3 rounded transition"
@@ -234,4 +316,6 @@ const homeSchema = {
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(homeFaqSchema)} />
 </Layout>

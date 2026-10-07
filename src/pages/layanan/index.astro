@@ -6,7 +6,7 @@ const catalogSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Direktori Layanan PT Prospera Talenta',
-  description: 'Pengadaan tim sales lapangan, SPG event, canvassing, mystery shopper, clipper video, dan aktivasi massa B2B.',
+  description: 'Penyedia jasa sales lapangan, jasa direct sales, jasa KOL visit, jasa riset pasar, jasa mystery shopper, jasa SPG usher, dan jasa sebar kuesioner skala nasional.',
   itemListElement: services.map((s, idx) => ({
     '@type': 'ListItem',
     position: idx + 1,
@@ -17,8 +17,8 @@ const catalogSchema = {
 ---
 
 <Layout
-  title="Direktori Layanan Sales Force & Outsourcing Talenta B2B"
-  description="Katalog komprehensif layanan PT Prospera Talenta: SPG/SPB event, direct sales canvassing, mystery shopper, sales aplikasi, clipper video, dan aktivasi komunitas."
+  title="Katalog Layanan Jasa Sales & Outsourcing B2B Terlengkap"
+  description="Daftar lengkap layanan PT Prospera Talenta: Jasa Direct Sales, Jasa KOL Visit, Jasa Riset Pasar, Jasa Mystery Shopper, Jasa SPG Usher, dan Jasa Sebar Kuesioner."
   schema={catalogSchema}
 >
   <section class="bg-[#FAF8F5] border-b border-[#E7E2D9] py-14">
@@ -29,10 +29,10 @@ const catalogSchema = {
         <span class="text-[#1C1917] font-medium">Layanan</span>
       </nav>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1C1917] tracking-tight mb-3">
-        Direktori Layanan B2B
+        Katalog Layanan Jasa Sales & Talenta Lapangan B2B
       </h1>
       <p class="text-sm sm:text-base text-[#57534E] max-w-2xl leading-relaxed">
-        Infrastruktur penyedia talenta terlatih dan terorganisir untuk percepatan komersial produk di seluruh wilayah Indonesia.
+        Infrastruktur penyedia talenta terlatih dan terkelola untuk percepatan distribusi, validasi pasar, serta promosi produk bisnis Anda di seluruh wilayah Indonesia.
       </p>
     </div>
   </section>
@@ -56,7 +56,7 @@ const catalogSchema = {
               </p>
 
               <div class="border-t border-[#E7E2D9] pt-3 mb-4">
-                <p class="text-[11px] font-semibold uppercase tracking-wider text-[#78716C] mb-2">Cakupan Kerja:</p>
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-[#78716C] mb-2">Cakupan Tugas:</p>
                 <ul class="text-xs text-[#57534E] space-y-1">
                   {service.deliverables.slice(0, 3).map((d) => (
                     <li class="flex items-start gap-1.5">
@@ -70,7 +70,7 @@ const catalogSchema = {
 
             <div class="pt-4 border-t border-[#E7E2D9] flex items-center justify-between text-xs">
               <a href={`/layanan/${service.slug}`} class="font-medium text-[#1C1917] hover:text-[#C8371B]">
-                Lihat Detail &rarr;
+                Lihat Detail Layanan &rarr;
               </a>
               <a
                 href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20tanya%20detail%20layanan%20${encodeURIComponent(service.title)}.`}
@@ -93,7 +93,7 @@ const catalogSchema = {
         Kebutuhan Penugasan Skala Multi-Kota?
       </h2>
       <p class="text-xs sm:text-sm text-[#57534E] max-w-xl mx-auto mb-6">
-        Kami berpengalaman mengkoordinasikan ratusan personel serentak untuk kampanye peluncuran produk dan roadshow nasional.
+        Kami berpengalaman mengkoordinasikan ratusan personel serentak untuk kampanye peluncuran produk dan aktivasi komersial nasional.
       </p>
       <a
         href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20paket%20penugasan%20multi-kota."

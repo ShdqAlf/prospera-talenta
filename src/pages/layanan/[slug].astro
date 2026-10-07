@@ -15,7 +15,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: service.title,
-  description: service.description,
+  description: service.metaDescription,
   provider: {
     '@type': 'Organization',
     name: 'PT Prospera Talenta',
@@ -42,8 +42,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title={`${service.title} - Penyedia Talenta B2B`}
-  description={`${service.tagline} Dikelola PT Prospera Talenta dengan supervisi lapangan dan standarisasi SOP.`}
+  title={service.metaTitle}
+  description={service.metaDescription}
   schema={serviceSchema}
 >
   <!-- Breadcrumb & Header -->
@@ -69,12 +69,12 @@ const faqSchema = {
         </p>
 
         <a
-          href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20minta%20rate%20card%20layanan%20${encodeURIComponent(service.title)}.`}
+          href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20layanan%20${encodeURIComponent(service.title)}.`}
           target="_blank"
           rel="noopener"
           class="inline-block bg-[#C8371B] hover:bg-[#A82B13] text-[#FAF8F5] text-xs font-semibold px-5 py-2.5 rounded transition"
         >
-          Minta Rate Card & Ketersediaan
+          Konsultasi & Minta Rate Card
         </a>
       </div>
     </div>
@@ -84,51 +84,93 @@ const faqSchema = {
   <section class="py-14 bg-white border-b border-[#E7E2D9]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        <!-- Main -->
-        <div class="lg:col-span-2 space-y-10">
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Overview & Intro -->
           <div>
-            <h2 class="text-lg font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
-              Deskripsi & Gambaran Umum
+            <h2 class="text-xl font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              Gambaran Umum {service.title}
             </h2>
-            <p class="text-sm text-[#57534E] leading-relaxed">
-              {service.description}
+            <p class="text-sm text-[#57534E] leading-relaxed mb-4">
+              {service.intro}
+            </p>
+            <p class="text-xs text-[#78716C] leading-relaxed">
+              Dikelola langsung oleh manajemen profesional PT Prospera Talenta dengan supervisi lapangan ketat dan pelaporan berkala.
             </p>
           </div>
 
+          <!-- Why Needed -->
           <div>
-            <h2 class="text-lg font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
-              Deliverables & Tanggung Jawab
+            <h2 class="text-xl font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              {service.whyTitle}
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {service.deliverables.map((item) => (
+            <p class="text-sm text-[#57534E] leading-relaxed mb-4">
+              {service.whyDescription}
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              {service.whyPoints.map((point) => (
                 <div class="p-3.5 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
-                  <span class="text-xs font-medium text-[#1C1917] block">• {item}</span>
+                  <h3 class="text-xs font-bold text-[#1C1917] mb-1">{point.title}</h3>
+                  <p class="text-xs text-[#57534E] leading-relaxed">{point.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
+          <!-- Deliverables -->
           <div>
-            <h2 class="text-lg font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
-              Keunggulan Bagi Klien Korporat
+            <h2 class="text-xl font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              {service.deliverablesTitle}
             </h2>
-            <div class="space-y-2">
+            <div class="space-y-2.5">
+              {service.deliverables.map((item) => (
+                <div class="p-3 bg-[#FAF8F5] border border-[#E7E2D9] rounded flex items-start gap-2.5">
+                  <span class="text-[#C8371B] font-bold text-sm leading-none mt-0.5">•</span>
+                  <span class="text-xs font-medium text-[#1C1917]">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div>
+            <h2 class="text-xl font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              {service.benefitsTitle}
+            </h2>
+            <div class="space-y-2.5">
               {service.benefits.map((b) => (
-                <div class="p-3 bg-[#FAF8F5] border-l-2 border-[#C8371B] text-xs text-[#57534E]">
+                <div class="p-3 bg-[#FAF8F5] border-l-3 border-[#C8371B] text-xs text-[#57534E] rounded-r">
                   {b}
                 </div>
               ))}
             </div>
           </div>
 
+          <!-- Workflow -->
+          <div>
+            <h2 class="text-xl font-bold text-[#1C1917] mb-3 border-b border-[#E7E2D9] pb-2">
+              {service.workflowTitle}
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              {service.workflow.map((w) => (
+                <div class="p-4 bg-[#FAF8F5] border border-[#E7E2D9] rounded">
+                  <span class="text-xs font-mono font-bold text-[#C8371B] block mb-1">LANGKAH {w.step}</span>
+                  <h3 class="text-xs font-bold text-[#1C1917] mb-1">{w.title}</h3>
+                  <p class="text-xs text-[#57534E] leading-relaxed">{w.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Target Industries -->
           {service.targetIndustries.length > 0 && (
             <div>
               <h2 class="text-sm font-bold text-[#1C1917] uppercase tracking-wider mb-2">
-                Kesesuaian Sektor Industri:
+                Sektor Industri yang Sesuai:
               </h2>
               <div class="flex flex-wrap gap-2">
                 {service.targetIndustries.map((ind) => (
-                  <span class="px-2.5 py-1 bg-[#FAF8F5] text-[#57534E] text-xs border border-[#E7E2D9] rounded">
+                  <span class="px-3 py-1 bg-[#FAF8F5] text-[#57534E] text-xs border border-[#E7E2D9] rounded">
                     {ind}
                   </span>
                 ))}
@@ -136,10 +178,11 @@ const faqSchema = {
             </div>
           )}
 
+          <!-- FAQs -->
           {service.faqs.length > 0 && (
             <div class="pt-6 border-t border-[#E7E2D9]">
-              <h2 class="text-lg font-bold text-[#1C1917] mb-4">
-                Pertanyaan Umum
+              <h2 class="text-xl font-bold text-[#1C1917] mb-4">
+                Pertanyaan Umum Seputar {service.title}
               </h2>
               <div class="space-y-3">
                 {service.faqs.map((faq) => (
@@ -157,10 +200,10 @@ const faqSchema = {
         <div class="lg:col-span-1">
           <div class="sticky top-24 bg-[#FAF8F5] border border-[#E7E2D9] rounded p-5 space-y-4">
             <h3 class="text-sm font-bold text-[#1C1917] pb-2 border-b border-[#E7E2D9]">
-              Konsultasi Layanan
+              Konsultasi Layanan {service.title}
             </h3>
             <p class="text-xs text-[#57534E] leading-relaxed">
-              Hubungi representatif PT Prospera Talenta untuk mendapatkan profil kandidat, rate card resmi, dan simulasi penugasan.
+              Hubungi representatif PT Prospera Talenta untuk mendapatkan profil kandidat, rate card resmi, dan proposal penugasan.
             </p>
 
             <div class="space-y-2 pt-2">
@@ -181,9 +224,9 @@ const faqSchema = {
             </div>
 
             <div class="pt-3 border-t border-[#E7E2D9] text-[11px] text-[#78716C] space-y-1">
-              <p>• Perjanjian kerjasama resmi berbadan hukum</p>
-              <p>• Skema tagihan corporate invoice</p>
-              <p>• Pengawasan supervisor lapangan</p>
+              <p>• Perjanjian kerjasama legal berbadan hukum</p>
+              <p>• Skema penagihan corporate B2B invoice</p>
+              <p>• Pengawasan langsung supervisor lapangan</p>
             </div>
           </div>
         </div>

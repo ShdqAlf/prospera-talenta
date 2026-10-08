@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://prosperatalenta.co.id',
+  site: 'https://prosperaagency.co.id',
   trailingSlash: 'never',
   integrations: [sitemap()],
   redirects: {

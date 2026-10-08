@@ -13,12 +13,12 @@ const {
   title,
   description = 'PT Prospera Talenta - Agensi pengadaan dan pengelolaan jasa sales B2B skala nasional. Penyedia tim direct sales, SPG usher, KOL visit, mystery shopper, dan riset pasar.',
   canonical,
-  image = 'https://prosperatalenta.co.id/og-image.png',
+  image = 'https://prosperaagency.co.id/og-image.png',
   schema,
 } = Astro.props;
 
-const currentPath = Astro.url.pathname;
-const siteUrl = 'https://prosperatalenta.co.id';
+const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : Astro.url.href;
+const siteUrl = 'https://prosperaagency.co.id';
 const canonicalUrl = canonical || new URL(currentPath, siteUrl).toString();
 
 const orgSchema = {
@@ -268,7 +268,7 @@ const orgSchema = {
             <p class="leading-relaxed text-[#78716C] mb-4">
               Penyedia dan pengelola jasa sales lapangan, SPG usher, mystery shopper, dan riset pasar B2B terstruktur di Indonesia.
             </p>
-            <p class="text-[#78716C]">prosperatalenta.co.id</p>
+            <p class="text-[#78716C]">prosperaagency.co.id</p>
           </div>
 
           <div class="md:col-span-2">

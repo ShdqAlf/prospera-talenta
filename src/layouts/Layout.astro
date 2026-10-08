@@ -27,8 +27,8 @@ const orgSchema = {
   name: 'PT Prospera Talenta',
   alternateName: 'Jasa Sales PT Prospera Talenta',
   url: siteUrl,
-  logo: `${siteUrl}/favicon.svg`,
-  image: `${siteUrl}/favicon.svg`,
+  logo: `${siteUrl}/logo.png`,
+  image: `${siteUrl}/logo.png`,
   description: description,
   telephone: '+6281398079090',
   email: 'jasasalesprospera@gmail.com',
@@ -87,7 +87,11 @@ const orgSchema = {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-150x150.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
@@ -117,14 +121,14 @@ const orgSchema = {
     <!-- Main Navigation -->
     <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-sm border-b border-[#E7E2D9]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded bg-[#C8371B] text-[#FAF8F5] font-bold text-sm flex items-center justify-center tracking-tight">
-            PT
-          </div>
-          <div class="leading-tight">
-            <span class="text-base font-bold tracking-tight text-[#1C1917] block">PROSPERA TALENTA</span>
-            <span class="text-[10px] uppercase tracking-wider text-[#78716C] block">Corporate Sales Force</span>
-          </div>
+        <a href="/" class="flex items-center gap-3 py-1">
+          <img
+            src="/logo.png"
+            alt="PT Prospera Talenta - Jasa Sales"
+            class="h-9 sm:h-10 w-auto object-contain"
+            width="300"
+            height="77"
+          />
         </a>
 
         <!-- Desktop Menu -->
@@ -252,7 +256,15 @@ const orgSchema = {
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-[#292524]">
           <div class="md:col-span-1">
-            <span class="text-sm font-bold text-[#FAF8F5] tracking-tight block mb-2">PT PROSPERA TALENTA</span>
+            <div class="inline-block bg-white/95 rounded px-3 py-1.5 mb-3">
+              <img
+                src="/logo.png"
+                alt="PT Prospera Talenta - Jasa Sales"
+                class="h-7 w-auto object-contain"
+                width="300"
+                height="77"
+              />
+            </div>
             <p class="leading-relaxed text-[#78716C] mb-4">
               Penyedia dan pengelola jasa sales lapangan, SPG usher, mystery shopper, dan riset pasar B2B terstruktur di Indonesia.
             </p>

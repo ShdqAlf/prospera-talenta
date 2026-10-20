@@ -26,7 +26,7 @@ const homeFaqSchema = {
       name: 'Layanan apa saja yang termasuk dalam jasa sales kami?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kami menyediakan enam solusi utama: Jasa Direct Sales, Jasa KOL Visit, Jasa Riset Pasar, Jasa Mystery Shopper, Jasa SPG Usher, dan Jasa Sebar Kuesioner.',
+        text: 'Kami menyediakan lebih dari 38.000 talenta untuk kebutuhan perusahaan: Komunitas (pelajar, mahasiswa, UMKM, otomotif), Sales Lapangan (direct sales, crew event, KOL visit, SPG, surveyor), dan Sales Digital (buzzer, clipper, influencer, rating review, registrasi aplikasi).',
       },
     },
     {
@@ -110,7 +110,7 @@ const featuredDocs = [
 
 <Layout
   title="Jasa Sales Lapangan & Outsourcing Sales B2B Terpercaya"
-  description="Mencari penyedia jasa sales profesional? PT Prospera Talenta menyediakan outsourcing jasa sales lapangan, direct sales, SPG, dan riset pasar di Indonesia."
+  description="Kami adalah agensi yang menyediakan lebih dari 38.000 talenta untuk kebutuhan perusahaan: Komunitas, Sales Lapangan, dan Sales Digital di berbagai kota di Indonesia."
   schema={homeSchema}
 >
   <!-- Hero Section -->
@@ -121,7 +121,7 @@ const featuredDocs = [
           Jasa Sales Lapangan Profesional dan Terkelola untuk Pertumbuhan Bisnis Anda.
         </h1>
         <p class="text-base sm:text-lg text-[#57534E] leading-relaxed mb-8">
-          Mencari penyedia jasa sales yang siap mendongkrak omzet dan memperluas distribusi produk perusahaan Anda? PT Prospera Talenta hadir sebagai mitra terpercaya penyedia jasa sales lapangan dan outsourcing komersial B2B di lebih dari 50 kota di Indonesia. Kami mengelola tenaga penjualan terlatih agar brand Anda dapat fokus pada inovasi produk dan kepuasan pelanggan.
+          Kami adalah agensi yang menyediakan lebih dari <strong>38.000 talenta</strong> untuk kebutuhan perusahaan anda: mulai dari komunitas-komunitas, sales lapangan, hingga sales digital. Talenta kami tersebar luas dan tersedia di berbagai kota di indonesia. Di mana bisnis Anda berada, kami siap bantu sukseskan bisnis Anda berjalan dengan baik.
         </p>
 
         <div class="flex flex-wrap items-center gap-3">
@@ -216,46 +216,139 @@ const featuredDocs = [
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
         <div>
           <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-1">
-            Pilihan Solusi Jasa Sales dari PT Prospera Talenta
+            Solusi Layanan & 38.000+ Talenta Kami
           </h2>
           <p class="text-xs text-[#78716C]">
-            Layanan komprehensif yang dirancang fleksibel sesuai kebutuhan target industri Anda.
+            Kami menyediakan lebih dari 38.000 talenta siap kerja di berbagai kota di Indonesia untuk kebutuhan perusahaan Anda.
           </p>
         </div>
         <a href="/layanan" class="text-xs font-semibold text-[#C8371B] hover:underline">
-          Lihat Semua 6 Layanan &rarr;
+          Lihat Katalog Layanan Lengkap &rarr;
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((s) => (
-          <div class="bg-white border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
-            <div>
-              <h3 class="text-base font-bold text-[#1C1917] mb-2">
-                <a href={`/layanan/${s.slug}`} class="hover:text-[#C8371B] transition">
-                  {s.title}
-                </a>
-              </h3>
-              <p class="text-xs text-[#57534E] leading-relaxed mb-4">
-                {s.tagline}
+      <!-- 3 Kategori Talenta Utama -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#C8371B]"></span>
+              <h3 class="text-lg font-bold text-[#1C1917]">Komunitas-komunitas</h3>
+            </div>
+            <p class="text-xs text-[#57534E] leading-relaxed mb-4">
+              Jaringan komunitas terverifikasi untuk pergerakan massa, crowd marketing, dan penetrasi segmen pasar:
+            </p>
+            <div class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-3 mb-4">
+              <p class="text-xs text-[#57534E] leading-relaxed">
+                Komunitas pelajar, mahasiswa, pedagang UMKM, pengusaha mainan pasar malam, otomotif dll.
               </p>
             </div>
+          </div>
+          <div class="pt-4 border-t border-[#E7E2D9]">
+            <a
+              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20talenta%20Komunitas."
+              target="_blank"
+              rel="noopener"
+              class="inline-block text-xs font-semibold text-[#C8371B] hover:text-[#A82B13]"
+            >
+              Konsultasi Komunitas &rarr;
+            </a>
+          </div>
+        </div>
 
-            <div class="pt-4 border-t border-[#E7E2D9] flex items-center justify-between text-xs">
-              <a href={`/layanan/${s.slug}`} class="font-medium text-[#1C1917] hover:text-[#C8371B]">
-                Pelajari Layanan &rarr;
-              </a>
-              <a
-                href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20tanya%20layanan%20${encodeURIComponent(s.title)}.`}
-                target="_blank"
-                rel="noopener"
-                class="font-semibold text-[#C8371B] hover:text-[#A82B13]"
-              >
-                Minta Penawaran
-              </a>
+        <div class="bg-white border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#C8371B]"></span>
+              <h3 class="text-lg font-bold text-[#1C1917]">Sales Lapangan</h3>
+            </div>
+            <p class="text-xs text-[#57534E] leading-relaxed mb-4">
+              Tenaga penjualan on-ground siap gerak untuk penetrasi pasar, edukasi produk, canvassing, hingga event:
+            </p>
+            <div class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-3 mb-4">
+              <p class="text-xs text-[#57534E] leading-relaxed">
+                Direct sales, Crew event, KOL visit, Market riset, Kuesioner offline, Penonton bayaran, Penyuluh lapangan, Sales aplikasi, Sales canvasing, SPB, SPG, Surveyor.
+              </p>
             </div>
           </div>
-        ))}
+          <div class="pt-4 border-t border-[#E7E2D9] flex items-center justify-between text-xs">
+            <a href="/layanan" class="font-medium text-[#1C1917] hover:text-[#C8371B]">
+              Lihat Layanan &rarr;
+            </a>
+            <a
+              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20Sales%20Lapangan."
+              target="_blank"
+              rel="noopener"
+              class="font-semibold text-[#C8371B] hover:text-[#A82B13]"
+            >
+              Minta Penawaran
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#C8371B]"></span>
+              <h3 class="text-lg font-bold text-[#1C1917]">Sales Digital</h3>
+            </div>
+            <p class="text-xs text-[#57534E] leading-relaxed mb-4">
+              Eksekusi kampanye online, akuisisi pengguna aplikasi, social proof, dan peningkatan reputasi digital:
+            </p>
+            <div class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-3 mb-4">
+              <p class="text-xs text-[#57534E] leading-relaxed">
+                Buzzer, Clipper, Influencer, Kuesioner online, KOL, Marketplace, Rating & review, Registrasi aplikasi playstore & web, Trending topic, Voting dll.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-[#E7E2D9]">
+            <a
+              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20Sales%20Digital."
+              target="_blank"
+              rel="noopener"
+              class="inline-block text-xs font-semibold text-[#C8371B] hover:text-[#A82B13]"
+            >
+              Konsultasi Sales Digital &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detail Layanan Unggulan -->
+      <div>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-[#78716C] mb-4">
+          Paket Layanan Terkelola:
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s) => (
+            <div class="bg-white border border-[#E7E2D9] rounded p-6 flex flex-col justify-between">
+              <div>
+                <h4 class="text-base font-bold text-[#1C1917] mb-2">
+                  <a href={`/layanan/${s.slug}`} class="hover:text-[#C8371B] transition">
+                    {s.title}
+                  </a>
+                </h4>
+                <p class="text-xs text-[#57534E] leading-relaxed mb-4">
+                  {s.tagline}
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-[#E7E2D9] flex items-center justify-between text-xs">
+                <a href={`/layanan/${s.slug}`} class="font-medium text-[#1C1917] hover:text-[#C8371B]">
+                  Pelajari Layanan &rarr;
+                </a>
+                <a
+                  href={`https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20tanya%20layanan%20${encodeURIComponent(s.title)}.`}
+                  target="_blank"
+                  rel="noopener"
+                  class="font-semibold text-[#C8371B] hover:text-[#A82B13]"
+                >
+                  Minta Penawaran
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -396,7 +489,7 @@ const featuredDocs = [
         <div class="p-5 bg-white border border-[#E7E2D9] rounded">
           <h3 class="text-sm font-bold text-[#1C1917] mb-1.5">Layanan apa saja yang termasuk dalam cakupan jasa sales kami?</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Kami menyediakan enam solusi utama: Jasa Direct Sales, Jasa KOL Visit, Jasa Riset Pasar, Jasa Mystery Shopper, Jasa SPG Usher, dan Jasa Sebar Kuesioner di berbagai kota Indonesia.
+            Kami menyediakan lebih dari 38.000 talenta dalam 3 kategori utama: <strong>Komunitas</strong> (pelajar, mahasiswa, pedagang UMKM, pasar malam, otomotif), <strong>Sales Lapangan</strong> (direct sales, crew event, KOL visit, riset pasar, kuesioner offline, penonton bayaran, penyuluh lapangan, sales aplikasi, canvasing, SPB, SPG, surveyor), dan <strong>Sales Digital</strong> (buzzer, clipper, influencer, kuesioner online, KOL, marketplace, rating & review, registrasi aplikasi, trending topic, voting dll).
           </p>
         </div>
 

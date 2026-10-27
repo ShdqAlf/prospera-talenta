@@ -774,5 +774,381 @@ export const services: ServiceItem[] = [
         answer: 'Tentu. Enumerator kami tersebar di berbagai kota besar di Pulau Jawa, Sumatera, Kalimantan, Sulawesi, hingga Bali.'
       }
     ]
+  },
+  {
+    slug: 'jasa-clipper-video',
+    keyword: 'jasa clipper video',
+    category: 'digital',
+    categoryLabel: 'Kreator & Digital',
+    title: 'Jasa Clipper Video',
+    metaTitle: 'Jasa Clipper Video TikTok & Reels B2B',
+    metaDescription: 'Jasa clipper video profesional Prospera Agency. Kami kurasi video podcast & live jadi konten viral TikTok, Reels, & Shorts. Minta rate card!',
+    tagline: 'Kurasi dan potong rekaman podcast, webinar, dan live stream menjadi ratusan video pendek vertikal siap viral di TikTok, Instagram Reels, dan YouTube Shorts.',
+    description: 'Layanan jasa clipper video profesional untuk memproduksi konten video pendek vertikal dengan hook tinggi, teks dinamis, dan optimasi algoritma media sosial.',
+    intro: 'Mencari mitra jasa clipper video profesional untuk memperluas jangkauan brand Anda di media sosial? PT Prospera Talenta menghadirkan layanan jasa clipper video terkelola yang mengolah rekaman panjang podcast, seminar, dan webinar menjadi ratusan klip vertikal siap viral. Karena itu, tim editor kami berfokus pada hook 3 detik pertama agar video Anda memikat audiens TikTok, Instagram Reels, dan YouTube Shorts secara konsisten.',
+    whyTitle: 'Mengapa Brand Anda Membutuhkan Jasa Clipper Video?',
+    whyDescription: 'Konsumsi audiens modern kini didominasi oleh konten video vertikal berdurasi pendek. Selain itu, memproduksi puluhan klip berkualitas secara mandiri membutuhkan waktu kurasi dan biaya editor internal yang cukup tinggi. Oleh sebab itu, menggunakan jasa clipper video profesional merupakan solusi paling efisien untuk melipatgandakan kehadiran organik brand Anda.',
+    whyPoints: [
+      {
+        title: 'Hook & Retensi Tinggi',
+        desc: 'Kurasi momen bernilai tinggi dengan teknik hook 3 detik pertama untuk mempertahankan watch time audiens.'
+      },
+      {
+        title: 'Produksi Skala Besar',
+        desc: 'Mengubah 1 jam rekaman video panjang menjadi 10 hingga 20 klip vertikal siap tayang lengkap dengan teks dinamis.'
+      },
+      {
+        title: 'Efisiensi Biaya Konten',
+        desc: 'Menghemat anggaran produksi konten harian tanpa perlu merekrut tim editor internal full-time.'
+      }
+    ],
+    deliverablesTitle: 'Ruang Lingkup dan Output Layanan Jasa Clipper Video',
+    deliverables: [
+      'Kurasi timestamp dan penentuan momen berpotensi viral dari video mentah',
+      'Editing video rasio vertikal 9:16 Full HD untuk TikTok, Reels, dan Shorts',
+      'Penyisipan subtitle kinetik dinamis, efek transisi halus, dan background musik trending',
+      'Pembuatan copywriting caption interaktif, riset tagar relevan, dan panduan cover',
+      'Pengiriman batch file video siap unggah via cloud storage secara terjadwal'
+    ],
+    benefitsTitle: 'Keunggulan Memilih Jasa Clipper Video PT Prospera Talenta',
+    benefits: [
+      'Didukung puluhan video editor berpengalaman yang memahami algoritma FYP TikTok dan Explore Reels',
+      'Standar visual profesional dengan kontrol mutu (QC) ketat sebelum penyerahan materi ke klien',
+      'Turnaround time cepat dalam 24 hingga 48 jam untuk menjaga konsistensi posting harian',
+      'Kepemilikan hak cipta penuh atas seluruh aset konten video yang telah selesai diproduksi'
+    ],
+    workflowTitle: 'Tahapan Pengerjaan Jasa Clipper Video',
+    workflow: [
+      {
+        step: '01',
+        title: 'Pemberian Materi Video',
+        desc: 'Klien mengirimkan tautan rekaman podcast, siaran langsung, atau materi video panjang.'
+      },
+      {
+        step: '02',
+        title: 'Kurasi Momen & Hook',
+        desc: 'Kurator menandai bagian paling menarik dan memiliki daya pikat tinggi bagi penonton.'
+      },
+      {
+        step: '03',
+        title: 'Editing & Subtitle Kinetik',
+        desc: 'Editor memotong video ke format vertikal, menyematkan teks dinamis, dan efek audio.'
+      },
+      {
+        step: '04',
+        title: 'Review Kualitas & Penyerahan',
+        desc: 'Supervisor memastikan kepatuhan standar sebelum file video diserahkan ke klien.'
+      }
+    ],
+    targetIndustries: [
+      'Podcaster & Kreator Konten',
+      'Startup & Brand E-commerce',
+      'Bisnis FnB, Kuliner & Retail',
+      'Lembaga Pendidikan & Kursus Online',
+      'Agensi Periklanan & Digital Marketing'
+    ],
+    faqs: [
+      {
+        question: 'Apa itu jasa clipper video dan apa manfaatnya bagi promosi brand?',
+        answer: 'Jasa clipper video adalah layanan pengolahan rekaman video panjang menjadi klip vertikal singkat (Shorts, Reels, TikTok) yang menarik guna mendatangkan penonton baru dan membangun interaksi organik secara luas.'
+      },
+      {
+        question: 'Format video apa saja yang dapat diproses oleh tim clipper?',
+        answer: 'Kami menerima rekaman siaran langsung, webinar Zoom, podcast YouTube, materi seminar, video wawancara, hingga video dokumentasi produk berdurasi panjang.'
+      },
+      {
+        question: 'Berapa lama estimasi waktu pengerjaan untuk setiap batch video klip?',
+        answer: 'Proses pengerjaan berkisar antara 24 hingga 48 jam untuk batch reguler, tergantung durasi materi mentah dan paket kuota video yang Anda pesan.'
+      }
+    ]
+  },
+  {
+    slug: 'jasa-buzzer',
+    keyword: 'jasa buzzer',
+    category: 'digital',
+    categoryLabel: 'Viral & Reputasi Digital',
+    title: 'Jasa Buzzer',
+    metaTitle: 'Jasa Buzzer Media Sosial & Trending Topic',
+    metaDescription: 'Jasa buzzer media sosial profesional dari Prospera Agency. Dorong trending topic, interaksi positif, dan reputasi digital brand Anda. Konsultasi sekarang!',
+    tagline: 'Mobilisasi ribuan akun media sosial aktif untuk trending topic, peningkatan interaksi positif, kampanye voting, dan penguatan reputasi brand.',
+    description: 'Layanan jasa buzzer profesional untuk mengorkestrasi perbincangan media sosial, mendongkrak trending topic, dan membangun sentimen publik positif.',
+    intro: 'Sedang membutuhkan jasa buzzer media sosial terpercaya untuk memperkuat kampanye digital bisnis Anda? PT Prospera Talenta menyediakan layanan jasa buzzer terkelola dengan jaringan ribuan akun riil aktif di berbagai saluran seperti X (Twitter), TikTok, Instagram, dan Google Reviews. Karena itu, setiap pergerakan opini dipandu secara strategis untuk menghasilkan impresi alami dan menjaga citra brand tetap terpercaya.',
+    whyTitle: 'Mengapa Bisnis Membutuhkan Jasa Buzzer Terkoordinasi?',
+    whyDescription: 'Di tengah derasnya arus informasi digital, social proof menjadi penentu utama keputusan konsumen. Selain itu, algoritma media sosial memprioritaskan konten dengan pertumbuhan interaksi cepat. Oleh sebab itu, memanfaatkan jasa buzzer profesional membantu mempercepat penyebaran pesan promosi Anda ke audiens yang lebih luas.',
+    whyPoints: [
+      {
+        title: 'Pemicu Algoritma Cepat',
+        desc: 'Meningkatkan volume interaksi secara serempak sehingga unggahan brand diprioritaskan algoritma platform.'
+      },
+      {
+        title: 'Penguatan Sentimen Positif',
+        desc: 'Menumbuhkan citra baik melalui komentar kontekstual yang natural sekaligus menetralkan opini negatif.'
+      },
+      {
+        title: 'Komando Terarah & Terukur',
+        desc: 'Aktivitas akun dijalankan berdasarkan pedoman narasi brand resmi tanpa risiko bot spamming.'
+      }
+    ],
+    deliverablesTitle: 'Ruang Lingkup dan Tanggung Jawab Tim Jasa Buzzer',
+    deliverables: [
+      'Penyebaran pesan kunci dan tagar kampanye untuk mendorong trending topic di media sosial',
+      'Pemberian reaksi positif berupa like, komentar relevan, quote, serta share berkala',
+      'Ulasan rating bintang lima dan testimoni positif pada platform Google Maps serta marketplace',
+      'Dukungan voting online, jajak pendapat, dan partisipasi kuis interaktif brand',
+      'Kompilasi bukti tangkapan layar (screenshot) dan laporan analitik capaian interaksi'
+    ],
+    benefitsTitle: 'Keunggulan Layanan Jasa Buzzer PT Prospera Talenta',
+    benefits: [
+      'Jaringan ribuan akun asli dengan profil personal aktif dan rekam jejak digital natural',
+      'Variasi bahasa komentar manusiawi yang fleksibel dan tidak terlihat seperti pesan robot',
+      'Jaminan kerahasiaan identitas dan data klien melalui perjanjian NDA B2B yang ketat',
+      'Kapasitas pengerahan massa digital berskala besar dalam hitungan jam untuk kebutuhan darurat'
+    ],
+    workflowTitle: 'Tahapan Pelaksanaan Kampanye Jasa Buzzer',
+    workflow: [
+      {
+        step: '01',
+        title: 'Penetapan Narasi & Tagar',
+        desc: 'Merumuskan pesan kunci, hashtag sasaran, dan waktu rilis kampanye yang paling efektif.'
+      },
+      {
+        step: '02',
+        title: 'Penyusunan Sudut Pandang Komentar',
+        desc: 'Menyiapkan variasi materi tulisan komentar agar dialog di kolom komentar terlihat dinamis.'
+      },
+      {
+        step: '03',
+        title: 'Eksekusi Terjadwal',
+        desc: 'Menginstruksikan jaringan buzzer bergerak serentak sesuai jendela waktu puncak audiens.'
+      },
+      {
+        step: '04',
+        title: 'Rekapitulasi & Pelaporan',
+        desc: 'Menghimpun seluruh tautan aktivitas dan menyerahkan laporan metrik performa kampanye.'
+      }
+    ],
+    targetIndustries: [
+      'Brand Korporasi & Consumer Goods',
+      'Fintech, Perbankan & Aplikasi Mobile',
+      'Industri Hiburan, Musik & Perfilman',
+      'Lembaga Publik, Komunikasi & Media',
+      'Bisnis Hospitality, Hotel & Restoran'
+    ],
+    faqs: [
+      {
+        question: 'Apa itu jasa buzzer dan bagaimana mekanisme penugasannya?',
+        answer: 'Jasa buzzer adalah layanan pengorganisasian pengguna media sosial aktif untuk mengamplifikasi topik atau produk tertentu melalui percakapan, komentar positif, dan penyebaran tagar secara masif.'
+      },
+      {
+        question: 'Apakah akun yang digunakan berisiko dianggap spam oleh platform?',
+        answer: 'Tidak, karena seluruh akun yang kami kerahkan adalah akun pengguna riil yang memiliki aktivitas posting organik, sehingga interaksi dinilai wajar oleh sistem keamanan media sosial.'
+      },
+      {
+        question: 'Berapa lama waktu yang dibutuhkan untuk memulai kampanye buzzer?',
+        answer: 'Setelah arahan narasi dan jadwal disepakati, tim koordinator kami dapat mengerahkan jaringan buzzer dalam waktu 2 hingga 4 jam.'
+      }
+    ]
+  },
+  {
+    slug: 'jasa-event-organizer',
+    keyword: 'jasa event organizer',
+    category: 'event',
+    categoryLabel: 'Event & Aktivasi',
+    title: 'Jasa Event Organizer',
+    metaTitle: 'Jasa Event Organizer & Crew Acara Indonesia',
+    metaDescription: 'Jasa event organizer terpercaya dari Prospera Agency. Siap sediakan crew event, aktivasi pameran, dan crowd management profesional. Konsultasi sekarang!',
+    tagline: 'Manajemen pameran expo, aktivasi brand on-ground, dan acara korporat didukung ratusan crew lapangan profesional dan sistem manajemen kerumunan yang tertib.',
+    description: 'Layanan jasa event organizer profesional untuk merancang, mengorganisasi, dan mengeksekusi aktivasi pameran, peluncuran produk, festival, dan pengerahan personel acara.',
+    intro: 'Membutuhkan dukungan jasa event organizer berpengalaman untuk menyelenggarakan acara perusahaan Anda? PT Prospera Talenta menyediakan solusi jasa event organizer terpadu yang memadukan perencanaan logistik, tata panggung, hingga penyediaan crew event profesional di lapangan. Selain itu, kami memiliki jaringan luas koordinator lapangan di berbagai kota besar di Indonesia untuk menjamin kelancaran setiap agenda.',
+    whyTitle: 'Mengapa Perusahaan Anda Memerlukan Jasa Event Organizer?',
+    whyDescription: 'Menyelenggarakan kegiatan publik atau pameran bisnis menuntut ketelitian teknis dan kesiapan personel yang tanggap. Selain itu, kendala di lapangan dapat merusak reputasi brand bila tidak diantisipasi dengan matang. Oleh sebab itu, mempercayakan teknis operasional kepada jasa event organizer profesional adalah pilihan terbaik agar tim Anda fokus melayani relasi bisnis.',
+    whyPoints: [
+      {
+        title: 'Eksekusi Lapangan Rapi',
+        desc: 'Setiap segmen acara dipandu timeline ketat dan koordinasi panggung yang terarah.'
+      },
+      {
+        title: 'Kesiapan Personel Terlatih',
+        desc: 'Penyediaan tenaga usher, ticketing, liaison officer (LO), hingga runner panggung siap pakai.'
+      },
+      {
+        title: 'Mitigasi Risiko Kerumunan',
+        desc: 'Penerapan standar crowd control dan koordinasi pengamanan untuk mencegah penumpukan massa.'
+      }
+    ],
+    deliverablesTitle: 'Ruang Lingkup Pekerjaan Jasa Event Organizer',
+    deliverables: [
+      'Penyusunan master rundown acara, floor plan, dan skenario alur pengunjung di venue',
+      'Penyediaan crew acara profesional: ticketing, registrasi tamu, LO, runner, dan operator visual',
+      'Koordinasi vendor panggung, sistem tata suara, pencahayaan, serta dekorasi booth',
+      'Penyediaan penonton bayaran terkoordinasi untuk memeriahkan antusiasme acara publik',
+      'Laporan evaluasi komprehensif pasca-event disertai dokumentasi foto dan video resolusi tinggi'
+    ],
+    benefitsTitle: 'Keuntungan Menggunakan Jasa Event Organizer PT Prospera Talenta',
+    benefits: [
+      'Didukung basis data lebih dari 38.000 talenta untuk kemudahan pengadaan crew di puluhan kota',
+      'Pimpinan lapangan berpengalaman yang terbiasa menangani dinamika acara skala besar',
+      'Kerjasama legal B2B formal lengkap dengan faktur pajak dan rincian anggaran transparan',
+      'Fleksibilitas model penugasan dari penyediaan tenaga kru lepasan hingga manajemen acara penuh'
+    ],
+    workflowTitle: 'Alur Manajemen Jasa Event Organizer',
+    workflow: [
+      {
+        step: '01',
+        title: 'Konsultasi Konsep & Venue',
+        desc: 'Menganalisis tujuan acara, segmen pengunjung sasaran, dan tata letak lokasi kegiatan.'
+      },
+      {
+        step: '02',
+        title: 'Penyusunan Tim & Rundown',
+        desc: 'Membagi peran crew lapangan, menyusun jadwal teknis, dan menggelar briefing simulasi.'
+      },
+      {
+        step: '03',
+        title: 'Operasional Hari Acara',
+        desc: 'Memimpin pelaksanaan acara dari pembukaan hingga penutupan dengan pengawasan ketat.'
+      },
+      {
+        step: '04',
+        title: 'Penyelesaian & Evaluasi',
+        desc: 'Memastikan area bersih pasca-acara dan menyerahkan laporan performa pelaksanaan.'
+      }
+    ],
+    targetIndustries: [
+      'Korporasi Swasta & Lembaga BUMN',
+      'Penyelenggara Pameran & Expo Industri',
+      'Brand Otomotif, Gaya Hidup & Elektronik',
+      'Promotor Konser & Festival Komunitas',
+      'Instansi Pemerintahan & Asosiasi Profesi'
+    ],
+    documentation: [
+      {
+        type: 'image',
+        src: '/spg/spg-event-1-fix.jpg',
+        title: 'Penyelenggaraan Pameran Expo Bisnis',
+        caption: 'Penyediaan crew pameran dan pengondisian booth korporat skala nasional.'
+      },
+      {
+        type: 'image',
+        src: '/spg/spg-event-3-fix.jpg',
+        title: 'Manajemen Protokol & Registrasi Tamu',
+        caption: 'Penerimaan tamu undangan dan registrasi tertib pada agenda gathering resmi.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Apa saja jenis kegiatan yang dapat ditangani oleh tim jasa event organizer?',
+        answer: 'Kami menangani pameran expo dagang, peluncuran produk baru, seminar konferensi B2B, aktivasi booth mall, family gathering perusahaan, hingga konser dan festival publik luar ruang.'
+      },
+      {
+        question: 'Apakah klien bisa hanya menyewa tim crew event tanpa paket penuh?',
+        answer: 'Bisa. Kami melayani pengadaan crew lepasan (seperti usher, registrasi, LO, ticketing) maupun paket manajemen acara menyeluruh (full-service event organizer).'
+      },
+      {
+        question: 'Di wilayah mana saja cakupan layanan event organizer ini tersedia?',
+        answer: 'Layanan kami tersedia di seluruh kota besar di Indonesia, meliputi Jabodetabek, Bandung, Semarang, Surabaya, Denpasar, Medan, Makassar, dan kota-kota lainnya.'
+      }
+    ]
+  },
+  {
+    slug: 'jasa-aktivasi-komunitas',
+    keyword: 'jasa aktivasi komunitas',
+    category: 'crowd',
+    categoryLabel: 'Komunitas & Crowd',
+    title: 'Jasa Aktivasi Komunitas',
+    metaTitle: 'Jasa Aktivasi Komunitas & Crowd Marketing',
+    metaDescription: 'Jasa aktivasi komunitas terpercaya dari Prospera Agency. Hubungkan brand Anda dengan ribuan anggota komunitas UMKM, pelajar, & otomotif. Hubungi kami!',
+    tagline: 'Mobilisasi jaringan komunitas terverifikasi untuk crowd marketing, pengenalan produk baru, edukasi tatap muka, dan peningkatan loyalitas konsumen.',
+    description: 'Layanan jasa aktivasi komunitas profesional untuk menghubungkan brand Anda dengan kelompok komunitas pelajar, UMKM, otomotif, dan paguyuban aktif di seluruh Indonesia.',
+    intro: 'Ingin memperkenalkan brand Anda langsung ke kelompok konsumen yang memiliki ikatan komunitas kuat? PT Prospera Talenta menghadirkan layanan jasa aktivasi komunitas terstruktur untuk merangkul puluhan ribu anggota komunitas di berbagai daerah. Karena itu, tim kami merancang program kegiatan yang relevan agar produk Anda diterima secara hangat dan menghasilkan rekomendasi autentik.',
+    whyTitle: 'Mengapa Brand Anda Membutuhkan Jasa Aktivasi Komunitas?',
+    whyDescription: 'Pemasaran berbasis komunitas menghasilkan retensi dan konversi yang jauh lebih kokoh dibanding iklan satu arah. Selain itu, rekomendasi dari sesama anggota komunitas menciptakan rasa percaya yang instan. Oleh sebab itu, menggunakan jasa aktivasi komunitas adalah langkah tepat untuk membangun advokasi merek yang berkelanjutan.',
+    whyPoints: [
+      {
+        title: 'Rekomendasi Otentik',
+        desc: 'Produk diperkenalkan secara alami melalui interaksi akrab di dalam lingkaran pertemanan komunitas.'
+      },
+      {
+        title: 'Segmen Pasar Presisi',
+        desc: 'Akses langsung ke target audiens khusus seperti mahasiswa, pelaku usaha UMKM, komunitas motor, hingga hobi.'
+      },
+      {
+        title: 'Efek Word of Mouth',
+        desc: 'Memicu percakapan organik dari mulut ke mulut yang mempercepat penerimaan produk di pasar luas.'
+      }
+    ],
+    deliverablesTitle: 'Bentuk Kegiatan dan Output Jasa Aktivasi Komunitas',
+    deliverables: [
+      'Pemetaan dan seleksi komunitas terverifikasi yang cocok dengan profil target konsumen brand',
+      'Penyelenggaraan acara temu komunitas, sesi demo produk, kompetisi, atau workshop bersama',
+      'Pembagian sampel produk (sampling) terarah disertai pengisian formulir ulasan jujur',
+      'Aktivasi pendaftaran pengguna baru untuk aplikasi mobile atau program membership klien',
+      'Dokumentasi visual liputan kegiatan dan laporan rekapitulasi data partisipasi anggota'
+    ],
+    benefitsTitle: 'Keunggulan Jasa Aktivasi Komunitas PT Prospera Talenta',
+    benefits: [
+      'Jejaring lebih dari 38.000 talenta dan ratusan komunitas binaan di berbagai kota di Indonesia',
+      'Hubungan kemitraan yang erat dengan ketua paguyuban sehingga perizinan kegiatan berjalan lancar',
+      'Laporan terukur mencakup total partisipan, tingkat kepuasan sampling, dan database calon prospek',
+      'Fleksibilitas format penugasan baik agenda temu darat (offline) maupun aktivasi grup daring'
+    ],
+    workflowTitle: 'Tahapan Pelaksanaan Jasa Aktivasi Komunitas',
+    workflow: [
+      {
+        step: '01',
+        title: 'Pemilihan Kategori Komunitas',
+        desc: 'Menentukan demografi dan karakteristik komunitas yang paling sejalan dengan produk Anda.'
+      },
+      {
+        step: '02',
+        title: 'Koordinasi Pengurus Komunitas',
+        desc: 'Menjalin komunikasi dengan pimpinan komunitas guna merumuskan skema kolaborasi yang saling menguntungkan.'
+      },
+      {
+        step: '03',
+        title: 'Penyelenggaraan Kegiatan',
+        desc: 'Melaksanakan kegiatan aktivasi, demonstrasi produk, dan edukasi langsung di lokasi kumpul komunitas.'
+      },
+      {
+        step: '04',
+        title: 'Pengumpulan Data & Ulasan',
+        desc: 'Menghimpun respon peserta, data pendaftaran, serta menyajikan laporan evaluasi pencapaian.'
+      }
+    ],
+    targetIndustries: [
+      'Aplikasi Fintech & Pembayaran Digital',
+      'Produk FMCG Makanan, Minuman & Suplemen',
+      'Pabrikan Otomotif, Pelumas & Suku Cadang',
+      'Perangkat Gadget, Seluler & Elektronik',
+      'Brand Pakaian, Perlengkapan Outdoor & Olahraga'
+    ],
+    documentation: [
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-3.webp',
+        title: 'Aktivasi Komunitas di Area Publik',
+        caption: 'Kegiatan interaktif bersama anggota komunitas di ruang publik.'
+      },
+      {
+        type: 'image',
+        src: '/sebar-kuesioner/jasa-sebar-kuesioner-6.webp',
+        title: 'Pembagian Merchandise & Demo Produk',
+        caption: 'Pemberian souvenir dan demonstrasi manfaat produk langsung kepada peserta komunitas.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Apa itu jasa aktivasi komunitas dan apa tujuannya?',
+        answer: 'Jasa aktivasi komunitas adalah pendekatan pemasaran yang merangkul perkumpulan atau paguyuban masyarakat untuk mencoba, memahami, dan mempromosikan produk secara alami kepada sesama anggota komunitas.'
+      },
+      {
+        question: 'Kategori komunitas apa saja yang dapat dijangkau oleh Prospera Agency?',
+        answer: 'Kami terhubung dengan komunitas pelajar dan mahasiswa, paguyuban pedagang UMKM dan pasar malam, perkumpulan motor dan mobil, paguyuban hobi kreatif, serta komunitas pecinta olahraga.'
+      },
+      {
+        question: 'Bagaimana cara mengevaluasi keberhasilan kegiatan aktivasi komunitas?',
+        answer: 'Tingkat keberhasilan dievaluasi melalui jumlah anggota yang terlibat, volume produk sampling yang didistribusikan, jumlah registrasi akun, serta kepuasan respon konsumen.'
+      }
+    ]
   }
 ];

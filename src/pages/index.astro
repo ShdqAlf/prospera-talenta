@@ -26,7 +26,7 @@ const homeFaqSchema = {
       name: 'Layanan apa saja yang termasuk dalam jasa sales kami?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kami menyediakan lebih dari 38.000 talenta untuk kebutuhan perusahaan: Komunitas (pelajar, mahasiswa, UMKM, otomotif), Sales Lapangan (direct sales, crew event, KOL visit, SPG, surveyor), dan Sales Digital (buzzer, clipper, influencer, rating review, registrasi aplikasi).',
+        text: 'Prospera Agency menyediakan lebih dari 38.000 talenta di Indonesia untuk kebutuhan perusahaan: Komunitas-komunitas, SPG/SPB, Sales-Marketing, Market Riset, Isi Kuesioner, KOL, Clipper, Buzzer, dan Event Organizer.',
       },
     },
     {
@@ -110,18 +110,22 @@ const featuredDocs = [
 
 <Layout
   title="Jasa Sales Lapangan & Outsourcing Sales B2B Terpercaya"
-  description="Kami adalah agensi yang menyediakan lebih dari 38.000 talenta untuk kebutuhan perusahaan: Komunitas, Sales Lapangan, dan Sales Digital di berbagai kota di Indonesia."
+  description="Prospera Agency menyediakan lebih dari 38.000 talenta di Indonesia: Komunitas-komunitas, SPG/SPB, Sales-Marketing, Market Riset, Isi Kuesioner, KOL, Clipper, Buzzer & Event Organizer."
   schema={homeSchema}
 >
   <!-- Hero Section -->
   <section class="bg-[#FAF8F5] border-b border-[#E7E2D9] pt-16 pb-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FAF0ED] border border-[#F3D5CC] text-[#C8371B] text-xs font-semibold uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#C8371B]"></span>
+          <span>Prospera Agency • Agensi Talenta Indonesia</span>
+        </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] tracking-tight leading-[1.18] mb-5">
           Jasa Sales Lapangan Profesional dan Terkelola untuk Pertumbuhan Bisnis Anda.
         </h1>
         <p class="text-base sm:text-lg text-[#57534E] leading-relaxed mb-8">
-          Kami adalah agensi yang menyediakan lebih dari <strong>38.000 talenta</strong> untuk kebutuhan perusahaan anda: mulai dari komunitas-komunitas, sales lapangan, hingga sales digital. Talenta kami tersebar luas dan tersedia di berbagai kota di indonesia. Di mana bisnis Anda berada, kami siap bantu sukseskan bisnis Anda berjalan dengan baik.
+          <strong>Prospera Agency</strong> adalah agensi talenta yang menyediakan lebih dari <strong>38.000 talenta</strong> di Indonesia: mulai dari <strong>komunitas-komunitas</strong>, <strong>SPG/SPB</strong>, <strong>sales-marketing</strong>, <strong>market riset</strong>, <strong>isi kuesioner</strong>, <strong>KOL</strong>, <strong>clipper</strong>, <strong>buzzer</strong>, hingga <strong>event organizer</strong>. Talenta kami sudah tersebar luas dan tersedia di berbagai kota. Di mana bisnis Anda berada, kami siap bantu sukseskan bisnis Anda berjalan dengan baik.
         </p>
 
         <div class="flex flex-wrap items-center gap-3">
@@ -213,18 +217,31 @@ const featuredDocs = [
   <!-- Service Directory -->
   <section class="py-16 bg-[#FAF8F5] border-b border-[#E7E2D9]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
         <div>
-          <h2 class="text-2xl font-bold text-[#1C1917] tracking-tight mb-1">
-            Solusi Layanan & 38.000+ Talenta Kami
+          <h2 class="text-2xl sm:text-3xl font-bold text-[#1C1917] tracking-tight mb-2">
+            Solusi Layanan & 38.000+ Talenta Prospera Agency
           </h2>
-          <p class="text-xs text-[#78716C]">
-            Kami menyediakan lebih dari 38.000 talenta siap kerja di berbagai kota di Indonesia untuk kebutuhan perusahaan Anda.
+          <p class="text-xs sm:text-sm text-[#57534E] max-w-2xl leading-relaxed">
+            Agensi talenta di Indonesia yang menyediakan solusi terintegrasi: Komunitas-komunitas, SPG/SPB, Sales-Marketing, Market Riset, Isi Kuesioner, KOL, Clipper, Buzzer, dan Event Organizer di berbagai kota.
           </p>
         </div>
-        <a href="/layanan" class="text-xs font-semibold text-[#C8371B] hover:underline">
+        <a href="/layanan" class="text-xs font-semibold text-[#C8371B] hover:underline whitespace-nowrap">
           Lihat Katalog Layanan Lengkap &rarr;
         </a>
+      </div>
+
+      <!-- Quick Category Badges -->
+      <div class="flex flex-wrap gap-2 mb-10">
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Komunitas-komunitas</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">SPG/SPB</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Sales-Marketing</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Market Riset</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Isi Kuesioner</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">KOL</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Clipper</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Buzzer</span>
+        <span class="px-3 py-1 bg-white border border-[#E7E2D9] rounded-full text-xs font-medium text-[#1C1917]">Event Organizer</span>
       </div>
 
       <!-- 3 Kategori Talenta Utama -->
@@ -236,11 +253,11 @@ const featuredDocs = [
               <h3 class="text-lg font-bold text-[#1C1917]">Komunitas-komunitas</h3>
             </div>
             <p class="text-xs text-[#57534E] leading-relaxed mb-4">
-              Jaringan komunitas terverifikasi untuk pergerakan massa, crowd marketing, dan penetrasi segmen pasar:
+              Jaringan komunitas terverifikasi untuk pergerakan massa, crowd marketing, edukasi audiens, dan penetrasi segmen pasar:
             </p>
             <div class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-3 mb-4">
               <p class="text-xs text-[#57534E] leading-relaxed">
-                Komunitas pelajar, mahasiswa, pedagang UMKM, pengusaha mainan pasar malam, otomotif dll.
+                Komunitas pelajar, mahasiswa, pedagang UMKM, pengusaha mainan pasar malam, otomotif, hingga komunitas hobi & minat khusus.
               </p>
             </div>
           </div>
@@ -260,14 +277,14 @@ const featuredDocs = [
           <div>
             <div class="flex items-center gap-2 mb-3">
               <span class="w-2.5 h-2.5 rounded-full bg-[#C8371B]"></span>
-              <h3 class="text-lg font-bold text-[#1C1917]">Sales Lapangan</h3>
+              <h3 class="text-lg font-bold text-[#1C1917]">SPG/SPB, Sales-Marketing & Event</h3>
             </div>
             <p class="text-xs text-[#57534E] leading-relaxed mb-4">
-              Tenaga penjualan on-ground siap gerak untuk penetrasi pasar, edukasi produk, canvassing, hingga event:
+              Tenaga komersial lapangan dan aktivasi event profesional untuk akselerasi transaksi serta branding on-ground:
             </p>
             <div class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-3 mb-4">
               <p class="text-xs text-[#57534E] leading-relaxed">
-                Direct sales, Crew event, KOL visit, Market riset, Kuesioner offline, Penonton bayaran, Penyuluh lapangan, Sales aplikasi, Sales canvasing, SPB, SPG, Surveyor.
+                SPG & SPB pameran/reguler, Direct Sales canvassing, tim Sales-Marketing, Event Organizer & Crew Event, Mystery Shopper, hingga Surveyor lapangan.
               </p>
             </div>
           </div>
@@ -276,7 +293,7 @@ const featuredDocs = [
               Lihat Layanan &rarr;
             </a>
             <a
-              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20Sales%20Lapangan."
+              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20SPG%2C%20Sales-Marketing%2C%20atau%20Event."
               target="_blank"
               rel="noopener"
               class="font-semibold text-[#C8371B] hover:text-[#A82B13]"
@@ -290,25 +307,25 @@ const featuredDocs = [
           <div>
             <div class="flex items-center gap-2 mb-3">
               <span class="w-2.5 h-2.5 rounded-full bg-[#C8371B]"></span>
-              <h3 class="text-lg font-bold text-[#1C1917]">Sales Digital</h3>
+              <h3 class="text-lg font-bold text-[#1C1917]">KOL, Clipper, Buzzer & Market Riset</h3>
             </div>
             <p class="text-xs text-[#57534E] leading-relaxed mb-4">
-              Eksekusi kampanye online, akuisisi pengguna aplikasi, social proof, dan peningkatan reputasi digital:
+              Eksekusi kampanye viral, kurasi konten video pendek, social proof, serta riset pasar dan validasi kuesioner:
             </p>
             <div class="bg-[#FAF8F5] border border-[#E7E2D9] rounded p-3 mb-4">
               <p class="text-xs text-[#57534E] leading-relaxed">
-                Buzzer, Clipper, Influencer, Kuesioner online, KOL, Marketplace, Rating & review, Registrasi aplikasi playstore & web, Trending topic, Voting dll.
+                KOL Visit & influencer, Jasa Video Clipper, Buzzer trending topic sosmed, Market Riset, Isi Kuesioner responden online/offline, rating & ulasan.
               </p>
             </div>
           </div>
           <div class="pt-4 border-t border-[#E7E2D9]">
             <a
-              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20Sales%20Digital."
+              href="https://wa.me/6281398079090?text=Halo%20PT%20Prospera%20Talenta%2C%20kami%20ingin%20konsultasi%20kebutuhan%20KOL%2C%20Clipper%2C%20Buzzer%2C%20atau%20Riset."
               target="_blank"
               rel="noopener"
               class="inline-block text-xs font-semibold text-[#C8371B] hover:text-[#A82B13]"
             >
-              Konsultasi Sales Digital &rarr;
+              Konsultasi Digital & Riset &rarr;
             </a>
           </div>
         </div>
@@ -489,7 +506,7 @@ const featuredDocs = [
         <div class="p-5 bg-white border border-[#E7E2D9] rounded">
           <h3 class="text-sm font-bold text-[#1C1917] mb-1.5">Layanan apa saja yang termasuk dalam cakupan jasa sales kami?</h3>
           <p class="text-xs text-[#57534E] leading-relaxed">
-            Kami menyediakan lebih dari 38.000 talenta dalam 3 kategori utama: <strong>Komunitas</strong> (pelajar, mahasiswa, pedagang UMKM, pasar malam, otomotif), <strong>Sales Lapangan</strong> (direct sales, crew event, KOL visit, riset pasar, kuesioner offline, penonton bayaran, penyuluh lapangan, sales aplikasi, canvasing, SPB, SPG, surveyor), dan <strong>Sales Digital</strong> (buzzer, clipper, influencer, kuesioner online, KOL, marketplace, rating & review, registrasi aplikasi, trending topic, voting dll).
+            Prospera Agency menyediakan lebih dari 38.000 talenta siap kerja di berbagai kota di Indonesia: mulai dari <strong>Komunitas-komunitas</strong>, <strong>SPG/SPB</strong>, tim <strong>Sales-Marketing</strong>, <strong>Market Riset</strong>, <strong>Isi Kuesioner</strong>, <strong>KOL</strong>, <strong>Clipper</strong>, <strong>Buzzer</strong>, hingga <strong>Event Organizer</strong>.
           </p>
         </div>
 

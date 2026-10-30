@@ -105,28 +105,76 @@ export const services: ServiceItem[] = [
     ],
         documentation: [
       {
-        type: 'image',
-        src: '/sebar-kuesioner/jasa-sebar-kuesioner-4.webp',
-        title: 'Penetrasi Canvassing Lapangan',
-        caption: 'Tim direct sales berinteraksi langsung dengan pemilik gerai dan konsumen retail.'
+        type: 'video',
+        src: '/direct-sales/direct-sales-1.mp4',
+        title: 'Demonstrasi Produk & Live Demo',
+        caption: 'Tim direct sales mendemonstrasikan keunggulan dan cara kerja produk secara langsung kepada target klien.'
+      },
+      {
+        type: 'video',
+        src: '/direct-sales/direct-sales-2.mp4',
+        title: 'Canvassing Lapangan & Penjualan Terbuka',
+        caption: 'Penyisiran titik strategis dan interaksi langsung dengan target audiens di area terbuka.'
+      },
+      {
+        type: 'video',
+        src: '/direct-sales/direct-sales-3.mp4',
+        title: 'Product Sampling & Edukasi Pasar',
+        caption: 'Edukasi produk dan pemberian tester langsung ke pedagang pasar tradisional untuk penetrasi ritel.'
+      },
+      {
+        type: 'video',
+        src: '/direct-sales/direct-sales-4.mp4',
+        title: 'Penetrasi Ritel Tradisional & Toko Kelontong',
+        caption: 'Penyisiran toko dan kios kelontong untuk mengenalkan promo produk dan mendorong transaksi on-the-spot.'
       },
       {
         type: 'image',
-        src: '/riset-pasar/jasa-riset-pasar-4.webp',
-        title: 'Edukasi Produk Tatap Muka',
-        caption: 'Demonstrasi keunggulan produk dan presentasi fitur langsung kepada calon pelanggan.'
+        src: '/direct-sales/jasa-direct-sales-1.webp',
+        title: 'Penetrasi Canvassing Pasar Tradisional',
+        caption: 'Tim direct sales menyisir kios pasar dan berinteraksi langsung dengan pedagang retail.'
       },
       {
         type: 'image',
-        src: '/sebar-kuesioner/jasa-sebar-kuesioner-7.webp',
-        title: 'Penyisiran Rute Journey Plan',
-        caption: 'Supervisi tim sales menyusuri area pemetaan harian dengan presensi berbasis GPS.'
+        src: '/direct-sales/jasa-direct-sales-2.webp',
+        title: 'Akuisisi User & Edukasi Aplikasi',
+        caption: 'Sosialisasi dan akuisisi pengguna aktif aplikasi digital pada target komunitas.'
       },
       {
         type: 'image',
-        src: '/riset-pasar/jasa-riset-pasar-2.webp',
-        title: 'Akuisisi Merchant & Pelanggan Baru',
-        caption: 'Pendataan identitas prospek dan penutupan transaksi secara langsung di lapangan.'
+        src: '/direct-sales/jasa-direct-sales-3.webp',
+        title: 'Direct Selling & Crowd Activation',
+        caption: 'Edukasi manfaat produk secara langsung di tengah antrean dan keramaian target audiens.'
+      },
+      {
+        type: 'image',
+        src: '/direct-sales/jasa-direct-sales-4.webp',
+        title: 'Edukasi Transaksi Modern Trade',
+        caption: 'Aktivasi dan pendampingan transaksi aplikasi konsumen di gerai ritel modern.'
+      },
+      {
+        type: 'image',
+        src: '/direct-sales/jasa-direct-sales-5.webp',
+        title: 'Cek Ketersediaan & Display Toko',
+        caption: 'Supervisi ketersediaan stok produk dan penataan display di warung kelontong mitra.'
+      },
+      {
+        type: 'image',
+        src: '/direct-sales/jasa-direct-sales-6.webp',
+        title: 'Onboarding Merchant & QRIS',
+        caption: 'Akuisisi dan edukasi pemilik warung kelontong dalam penggunaan platform pembayaran digital.'
+      },
+      {
+        type: 'image',
+        src: '/direct-sales/jasa-direct-sales-7.webp',
+        title: 'Canvassing Door-to-Door Residensial',
+        caption: 'Pendekatan langsung door-to-door untuk mengenalkan dan menjual produk ke konsumen rumah tangga.'
+      },
+      {
+        type: 'image',
+        src: '/direct-sales/jasa-direct-sales-8.webp',
+        title: 'Direct Selling Segmen Perkantoran',
+        caption: 'Kunjungan langsung ke area perkantoran untuk penawaran produk paket B2B dan retail instansi.'
       }
     ],
     faqs: [

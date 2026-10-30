@@ -11,6 +11,9 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 
+const videoDocs = service.documentation?.filter((d) => d.type === 'video') || [];
+const imageDocs = service.documentation?.filter((d) => d.type === 'image') || [];
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -278,62 +281,82 @@ const breadcrumbSchema = {
             </p>
           </div>
           <span class="text-xs text-[#78716C] font-medium bg-white border border-[#E7E2D9] px-3 py-1.5 rounded self-start sm:self-auto">
-            {service.documentation.length} {service.documentation[0].type === 'video' ? 'Video Dokumentasi' : 'Foto Dokumentasi'}
+            {videoDocs.length > 0 && imageDocs.length > 0
+              ? `${videoDocs.length} Video & ${imageDocs.length} Foto`
+              : videoDocs.length > 0
+                ? `${videoDocs.length} Video Dokumentasi`
+                : `${imageDocs.length} Foto Dokumentasi`}
           </span>
         </div>
 
-        {service.documentation[0].type === 'video' ? (
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {service.documentation.map((item) => (
-              <div class="bg-white border border-[#E7E2D9] rounded-lg overflow-hidden shadow-xs flex flex-col justify-between">
-                <div class="relative bg-black aspect-[9/16] overflow-hidden">
-                  <video
-                    controls
-                    playsinline
-                    preload="metadata"
-                    class="w-full h-full object-cover"
-                  >
-                    <source src={item.src} type="video/mp4" />
-                    Browser Anda tidak mendukung pemutar video.
-                  </video>
+        {videoDocs.length > 0 && (
+          <div class={imageDocs.length > 0 ? "mb-10" : ""}>
+            {imageDocs.length > 0 && (
+              <h3 class="text-sm font-bold text-[#1C1917] mb-4">
+                Video Dokumentasi ({videoDocs.length})
+              </h3>
+            )}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {videoDocs.map((item) => (
+                <div class="bg-white border border-[#E7E2D9] rounded-lg overflow-hidden shadow-xs flex flex-col justify-between">
+                  <div class="relative bg-black aspect-[9/16] overflow-hidden">
+                    <video
+                      controls
+                      playsinline
+                      preload="metadata"
+                      class="w-full h-full object-cover"
+                    >
+                      <source src={item.src} type="video/mp4" />
+                      Browser Anda tidak mendukung pemutar video.
+                    </video>
+                  </div>
+                  <div class="p-4">
+                    <h3 class="text-xs font-bold text-[#1C1917] mb-1 leading-snug">
+                      {item.title}
+                    </h3>
+                    {item.caption && (
+                      <p class="text-[11px] text-[#78716C] leading-relaxed">
+                        {item.caption}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h3 class="text-xs font-bold text-[#1C1917] mb-1 leading-snug">
-                    {item.title}
-                  </h3>
-                  {item.caption && (
-                    <p class="text-[11px] text-[#78716C] leading-relaxed">
-                      {item.caption}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        ) : (
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {service.documentation.map((item) => (
-              <div class="bg-white border border-[#E7E2D9] rounded-lg overflow-hidden shadow-xs group flex flex-col justify-between">
-                <div class="aspect-square bg-[#FAF8F5] overflow-hidden">
-                  <img
-                    src={item.src}
-                    alt={`${item.title} - ${service.title} PT Prospera Talenta`}
-                    loading="lazy"
-                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
+        )}
+
+        {imageDocs.length > 0 && (
+          <div>
+            {videoDocs.length > 0 && (
+              <h3 class="text-sm font-bold text-[#1C1917] mb-4">
+                Foto Dokumentasi ({imageDocs.length})
+              </h3>
+            )}
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {imageDocs.map((item) => (
+                <div class="bg-white border border-[#E7E2D9] rounded-lg overflow-hidden shadow-xs group flex flex-col justify-between">
+                  <div class="aspect-square bg-[#FAF8F5] overflow-hidden">
+                    <img
+                      src={item.src}
+                      alt={`${item.title} - ${service.title} PT Prospera Talenta`}
+                      loading="lazy"
+                      class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    />
+                  </div>
+                  <div class="p-3">
+                    <h3 class="text-xs font-bold text-[#1C1917] mb-1 leading-snug">
+                      {item.title}
+                    </h3>
+                    {item.caption && (
+                      <p class="text-[11px] text-[#78716C] leading-relaxed">
+                        {item.caption}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <div class="p-3">
-                  <h3 class="text-xs font-bold text-[#1C1917] mb-1 leading-snug">
-                    {item.title}
-                  </h3>
-                  {item.caption && (
-                    <p class="text-[11px] text-[#78716C] leading-relaxed">
-                      {item.caption}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
       </div>
